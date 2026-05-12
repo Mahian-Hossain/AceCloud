@@ -1,79 +1,29 @@
 'use client';
 
-import React from 'react';
-import { useRouter } from 'next/navigation';
-import { Box, Button, Typography } from '@mui/material';
-import Image from 'next/image';
-import something_lost from '@/public/lost-page/something-lost.png';
+import Link from 'next/link';
 
-const NotFound = () => {
-    const router = useRouter();
-
-    return (
-        <Box
-            sx={{
-                display: 'flex',
-                flexDirection: 'column',
-                alignItems: 'center',
-                justifyContent: 'center',
-                height: '100vh',
-                textAlign: 'center',
-                padding: 3,
-            }}
-        >
-            {/* Display Image */}
-            <Box sx={{ width: '100%', maxWidth: 400, marginBottom: 4 }}>
-                <Image
-                    src={something_lost}
-                    alt="Lost page illustration"
-                    style={{
-                        width: '100%',
-                        height: 'auto',
-                    }}
-                />
-            </Box>
-            <Typography
-                variant="h4"
-                sx={{
-                    fontWeight: 500,
-                    color: '#9333ea', // Loader bar color
-                    marginBottom: 2,
-                }}
-            >
-                Oops! Page Not Found
-            </Typography>
-            <Typography
-                variant="body1"
-                sx={{
-                    fontSize: '1rem',
-                    color: '#888',
-                    marginBottom: 4,
-                    maxWidth: 600,
-                }}
-            >
-                The page you’re looking for doesn’t exist or has been moved. Please check the URL or navigate back to the homepage.
-            </Typography>
-
-            {/* Button to Redirect */}
-            <Button
-                variant="contained"
-                sx={{
-                    backgroundColor: '#2563eb',
-                    color: '#fff',
-                    '&:hover': {
-                        backgroundColor: '#9333ea', // Loader inner circle color
-                    },
-                    padding: '10px 20px',
-                    borderRadius: 50,
-                    textTransform: 'none',
-                    fontSize: '1rem',
-                }}
-                onClick={() => router.push('/')}
-            >
-                Go Back to Home
-            </Button>
-        </Box>
-    );
-};
-
-export default NotFound;
+export default function NotFound() {
+  return (
+    <div style={{
+      display: 'flex', flexDirection: 'column',
+      alignItems: 'center', justifyContent: 'center',
+      minHeight: '100vh', textAlign: 'center',
+      fontFamily: '"Geist", ui-sans-serif, sans-serif',
+      padding: '0 24px',
+    }}>
+      <div style={{ fontFamily: '"Geist Mono", monospace', fontSize: 11, letterSpacing: '0.08em', textTransform: 'uppercase', color: '#5A5A55', marginBottom: 24 }}>
+        404 — Page not found
+      </div>
+      <h1 style={{ fontWeight: 500, fontSize: 'clamp(48px,8vw,120px)', letterSpacing: '-0.04em', lineHeight: 0.92, margin: '0 0 32px' }}>
+        Lost in the cloud.
+      </h1>
+      <Link href="/" style={{
+        display: 'inline-flex', alignItems: 'center', gap: 10,
+        padding: '14px 26px', background: '#0A0A0A', color: '#fff',
+        borderRadius: 999, fontSize: 14, fontWeight: 500, textDecoration: 'none',
+      }}>
+        Back home ↗
+      </Link>
+    </div>
+  );
+}

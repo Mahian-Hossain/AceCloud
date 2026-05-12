@@ -89,7 +89,7 @@ const cards = [
     col: 'wc-col-7', viz: 'wc-viz-2', Svg: VizDark,
     type: 'Platform', year: '2025',
     meta1: '01 — Halycon Capital', meta2: '→ +84% pipeline',
-    title: 'Re-platforming a fund's public face.',
+    title: "Re-platforming a fund’s public face.",
     href: '/projects',
   },
   {
