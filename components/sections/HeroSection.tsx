@@ -1,74 +1,81 @@
 'use client';
 
-import { motion } from 'framer-motion';
-import Image from 'next/image';
-import banner from '@/public/banner/HOMENEW.jpg';
-import { TypeAnimation } from 'react-type-animation';
+import { useEffect, useRef } from 'react';
+import Link from 'next/link';
 
 export default function HeroSection() {
+  const ref = useRef<HTMLElement>(null);
+
+  useEffect(() => {
+    const el = ref.current;
+    if (!el) return;
+    const io = new IntersectionObserver(
+      entries => entries.forEach(e => {
+        if (e.isIntersecting) {
+          e.target.classList.add('in');
+          io.unobserve(e.target);
+        }
+      }),
+      { threshold: 0.1 }
+    );
+    el.querySelectorAll('.reveal, .word-reveal').forEach(n => io.observe(n));
+    return () => io.disconnect();
+  }, []);
+
   return (
-    <div className="relative w-full min-h-[60vh] h-screen flex items-center justify-center overflow-hidden bg-black">
-      {/* Background Image */}
-      <div className="absolute inset-0 z-0">
-        <Image
-          src={banner}
-          alt="Hero Background"
-          fill
-          className="object-cover w-full h-full"
-          quality={100}
-          priority
-        />
+    <section className="ac-container ac-section ac-hero" id="top" ref={ref}>
+      <div className="hero-eyebrow reveal">
+        <span className="item">
+          <span className="dot" />
+          Available for Q3 — 2 slots
+        </span>
+        <span className="item">EST. 2023 · Toronto, Canada</span>
+        <span className="item">A digital infrastructure studio</span>
       </div>
 
-      {/* Content */}
-      <section className="relative z-10 text-center px-4 sm:px-6 md:px-8 lg:px-12 max-w-7xl mx-auto">
-        <motion.div
-          initial={{ opacity: 0, y: -30 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.8 }}
-        >
-          <h3 className="text-xs sm:text-sm md:text-lg lg:text-2xl text-white tracking-widest font-light mb-4 sm:mb-6">
-            FULL-STACK AGENCY
-          </h3>
-        </motion.div>
+      <h1 className="h-display hero-headline">
+        <span className="hero-line word-reveal">
+          <span>We engineer</span>
+        </span>{' '}
+        <span className="hero-line word-reveal reveal-d-1">
+          <span>brand experiences</span>
+        </span>{' '}
+        <span className="hero-line indent word-reveal reveal-d-2">
+          <span>
+            <span className="serif-italic">that</span> scale
+            <span className="pill">
+              <span className="stack">
+                <span /><span /><span />
+              </span>
+              with you
+            </span>
+            .
+          </span>
+        </span>
+      </h1>
 
-        <motion.h1
-          initial={{ opacity: 0, y: -30 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 1 }}
-          className="text-xl sm:text-2xl md:text-3xl lg:text-5xl font-light text-white mb-3 sm:mb-4 leading-tight tracking-wider sm:tracking-widest"
-        >
-          <TypeAnimation
-            sequence={[
-              'In  Web Design', 1200,
-              'In  Search Engine Optimization', 1200,
-              'In  Brand Design', 1200,
-            ]}
-            wrapper="span"
-            speed={50}
-            deletionSpeed={70}
-            className="text-accent inline-block ml-1 sm:ml-2"
-            repeat={Infinity}
-          />
-        </motion.h1>
+      <div className="hero-foot reveal reveal-d-3">
+        <p className="lede">
+          AceCloud is a full-stack digital partner for ambitious brands —
+          design, engineering and growth infrastructure under one roof.
+        </p>
+        <div className="meta">
+          Based<strong>Toronto, Canada</strong>
+        </div>
+        <div className="meta">
+          Engagements<strong>From $24K</strong>
+        </div>
+        <Link href="/book-meeting" className="ac-btn">
+          <span>Start a project</span>
+          <span className="arr">↗</span>
+        </Link>
+      </div>
 
-        <motion.p
-          initial={{ opacity: 0, y: 10 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ delay: 0.3, duration: 0.8 }}
-          className="text-gray-300 text-sm sm:text-md md:text-lg max-w-xs sm:max-w-sm md:max-w-md lg:max-w-xl mx-auto tracking-wide sm:tracking-wider mt-4 sm:mt-5"
-        >
-          Toronto, Canada
-        </motion.p>
-
-        <motion.div
-          initial={{ opacity: 0, y: 20 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ delay: 0.6, duration: 0.8 }}
-          className="mt-6 sm:mt-8"
-        >
-        </motion.div>
-      </section>
-    </div>
+      <div className="scroll-cue">
+        <span>Scroll</span>
+        <span className="bar" />
+        <span>01 / 09</span>
+      </div>
+    </section>
   );
 }
