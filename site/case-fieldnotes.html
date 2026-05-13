@@ -1,0 +1,153 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>Fieldnotes — AceCloud Case Study</title>
+<meta name="description" content="How AceCloud built a brand and e-commerce experience for Fieldnotes that drove 3× revenue growth in the first year."/>
+<link rel="preconnect" href="https://fonts.googleapis.com"/>
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
+<link href="https://fonts.googleapis.com/css2?family=Geist:wght@300;400;500;600&family=Geist+Mono:wght@400;500&family=Instrument+Serif:ital@0;1&display=swap" rel="stylesheet"/>
+<link rel="stylesheet" href="styles.css"/>
+<link rel="stylesheet" href="styles-v2.css"/>
+<link rel="stylesheet" href="styles-pages.css"/>
+<link rel="stylesheet" href="styles-cases.css"/>
+<style>
+.serif-italic{font-family:"Instrument Serif",serif!important;font-style:italic;font-weight:400}
+.case-visual { width: 100%; border-radius: var(--r-lg); overflow: hidden; border: 1px solid var(--line); margin: clamp(40px,7vh,80px) 0; }
+.case-visual svg { display: block; width: 100%; }
+.case-body { max-width: 72ch; }
+.case-body h2 { font-family: var(--display); font-weight: 500; font-size: clamp(28px,3vw,44px); letter-spacing: -0.03em; margin: 0 0 20px; }
+.case-body p { font-size: clamp(16px,1.3vw,19px); line-height: 1.65; color: var(--ink-2); margin: 0 0 24px; }
+.case-section { padding: clamp(64px,10vh,120px) 0; border-top: 1px solid var(--line); }
+.case-two-col { display: grid; grid-template-columns: 1fr 1fr; gap: clamp(40px,6vw,100px); align-items: start; }
+.case-results { display: grid; grid-template-columns: repeat(4,1fr); gap: 1px; background: var(--line); border: 1px solid var(--line); border-radius: var(--r-md); overflow: hidden; margin-top: clamp(40px,6vh,64px); }
+.result-cell { background: var(--bg); padding: clamp(24px,4vw,40px); }
+.result-cell .r-n { font-family: var(--display); font-weight: 400; font-size: clamp(36px,4.5vw,72px); letter-spacing: -0.04em; line-height: 1; margin-bottom: 10px; }
+.result-cell .r-l { font-family: var(--mono); font-size: 11px; text-transform: uppercase; letter-spacing: 0.08em; color: var(--mid-1); }
+.quote-block { background: var(--ink); color: var(--paper); border-radius: var(--r-lg); padding: clamp(40px,6vh,80px); margin: clamp(48px,8vh,96px) 0; }
+.quote-block blockquote { font-family: var(--display); font-weight: 400; font-size: clamp(22px,2.5vw,38px); line-height: 1.3; letter-spacing: -0.025em; margin: 0 0 28px; }
+.quote-block blockquote em { font-family: "Instrument Serif",serif; font-style: italic; color: rgba(250,250,247,0.6); }
+.quote-block .q-by { font-family: var(--mono); font-size: 11px; text-transform: uppercase; letter-spacing: 0.08em; color: rgba(250,250,247,0.55); }
+.deliverables-list { display: flex; flex-wrap: wrap; gap: 10px; margin-top: 28px; }
+.deliverables-list span { font-family: var(--mono); font-size: 11px; text-transform: uppercase; letter-spacing: 0.06em; padding: 7px 14px; border: 1px solid var(--line); border-radius: var(--r-pill); color: var(--mid-1); background: var(--paper); }
+.next-case { display: grid; grid-template-columns: 1fr 1fr; gap: 24px; margin-top: clamp(48px,7vh,80px); }
+.next-card { border: 1px solid var(--line); border-radius: var(--r-md); padding: 32px; text-decoration: none; color: var(--ink); transition: transform 0.4s cubic-bezier(0.34,1.56,0.64,1), box-shadow 0.3s; display: block; }
+.next-card:hover { transform: translateY(-4px); box-shadow: 0 12px 40px rgba(10,10,10,0.08); }
+.next-card .nc-tag { font-family: var(--mono); font-size: 10.5px; text-transform: uppercase; letter-spacing: 0.08em; color: var(--mid-1); margin-bottom: 14px; }
+.next-card .nc-title { font-family: var(--display); font-weight: 500; font-size: clamp(20px,2vw,30px); letter-spacing: -0.025em; display: flex; justify-content: space-between; align-items: baseline; }
+@media (max-width:768px) { .case-two-col,.case-results,.next-case { grid-template-columns: 1fr; } }
+</style>
+</head>
+<body>
+<script>window.PAGE_ACTIVE="portfolio";</script>
+<div id="nav-mount"></div>
+<main class="shell shell-v2">
+
+  <section class="container page-hero">
+    <h1 class="page-title rv">A brand built for people who <em>pay attention</em>.</h1>
+    <p class="page-lede rv">Fieldnotes makes premium stationery for the obsessively analog — notebooks, pens, accessories. Their product was exceptional. Their digital presence was an afterthought. We built a brand identity and e-commerce experience that matched the care they put into every product, and tripled revenue in the first year.</p>
+    <div class="page-meta">
+      <div class="rv"><div class="l">Client</div><div class="v">Fieldnotes</div></div>
+      <div class="rv"><div class="l">Scope</div><div class="v">Brand + Commerce</div></div>
+      <div class="rv"><div class="l">Timeline</div><div class="v">10 weeks</div></div>
+      <div class="rv"><div class="l">Result</div><div class="v">3× revenue</div></div>
+    </div>
+  </section>
+
+  <div class="container">
+    <div class="case-visual rv" style="aspect-ratio:16/9;background:#F5F0E8;">
+      <svg viewBox="0 0 1200 675" preserveAspectRatio="xMidYMid slice" style="width:100%;height:100%;display:block;">
+        <rect width="1200" height="675" fill="#F5F0E8"/>
+        <rect x="80" y="80" width="360" height="510" rx="4" fill="#2B2416"/>
+        <rect x="100" y="110" width="320" height="200" rx="2" fill="#F5F0E8" opacity="0.1"/>
+        <text x="120" y="180" font-family="Instrument Serif, serif" font-size="32" font-style="italic" fill="#F5F0E8">Fieldnotes</text>
+        <text x="120" y="215" font-family="Geist Mono, monospace" font-size="10" fill="rgba(245,240,232,0.6)" letter-spacing="2">MEMO BOOK · VOL. XII</text>
+        <text x="80" y="640" font-family="Geist Mono, monospace" font-size="11" fill="#8A7E6A" letter-spacing="1.5">PREMIUM STATIONERY · EST. 2019</text>
+        <text x="520" y="160" font-family="Geist, sans-serif" font-size="92" font-weight="500" fill="#2B2416" letter-spacing="-3">Write</text>
+        <text x="520" y="260" font-family="Instrument Serif, serif" font-style="italic" font-size="92" fill="#8A7E6A" letter-spacing="-2">everything</text>
+        <text x="520" y="350" font-family="Geist, sans-serif" font-size="92" font-weight="500" fill="#2B2416" letter-spacing="-3">down.</text>
+        <text x="520" y="440" font-family="Geist Mono, monospace" font-size="11" fill="#8A7E6A" letter-spacing="1.5">REVENUE GROWTH · YEAR 1</text>
+        <text x="520" y="500" font-family="Geist, sans-serif" font-size="64" font-weight="500" fill="#2B2416" letter-spacing="-2">3×</text>
+        <text x="520" y="530" font-family="Geist, sans-serif" font-size="14" fill="#8A7E6A">First-year revenue after relaunch</text>
+      </svg>
+    </div>
+  </div>
+
+  <section class="container case-section">
+    <div class="case-two-col">
+      <div>
+        <div class="page-eyebrow rv" style="margin-bottom:20px;">The challenge</div>
+        <div class="case-body rv">
+          <p>Fieldnotes had a loyal following on Instagram and a product that people genuinely loved. But their website was a basic Shopify template with stock photography that could have been selling anything. The conversion rate reflected it — 0.8% on qualified traffic that was clearly interested enough to click through from social.</p>
+          <p>The founder had a clear vision for the brand but no way to translate it into digital. Products that retail at a premium need a site that earns that price point. Theirs didn't.</p>
+        </div>
+      </div>
+      <div>
+        <div class="page-eyebrow rv" style="margin-bottom:20px;">Our approach</div>
+        <div class="case-body rv">
+          <p>We started with a brand foundation session — tone of voice, visual identity, photography direction, and a typography system that felt analog even on screen. Instrument Serif for headlines, Geist Mono for product metadata. Warm, off-white backgrounds with deep brown and ochre as accent.</p>
+          <p>The site was rebuilt on a custom Shopify theme with a headless storefront layer for performance. Every product page was designed to tell a story — materials, origin, use case — alongside the standard add-to-cart flow. We also implemented a subscription model for their core memo books, which became their highest-margin revenue channel within two months.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <div class="container rv">
+    <div class="quote-block">
+      <blockquote>"We knew our product was good. AceCloud made our website worthy of it. <em>The conversion rate went from under 1% to 4.2% in the first quarter.</em>"</blockquote>
+      <div class="q-by">Sasha Kim · Founder, Fieldnotes</div>
+    </div>
+  </div>
+
+  <section class="container case-section">
+    <div class="page-eyebrow rv" style="margin-bottom:20px;">Results · Year one post-relaunch</div>
+    <h2 class="h-1 rv" style="max-width:20ch;">Brand investment that paid back in the first quarter.</h2>
+    <div class="case-results rv">
+      <div class="result-cell"><div class="r-n">3×</div><div class="r-l">Revenue year one</div></div>
+      <div class="result-cell"><div class="r-n">4.2%</div><div class="r-l">Conversion rate (from 0.8%)</div></div>
+      <div class="result-cell"><div class="r-n">10wk</div><div class="r-l">Brand to live</div></div>
+      <div class="result-cell"><div class="r-n">+62%</div><div class="r-l">Avg. order value</div></div>
+    </div>
+    <div class="deliverables-list rv">
+      <span>Brand identity</span><span>Typography system</span><span>Shopify theme</span><span>Product photography direction</span><span>Subscription model</span><span>Email flows</span><span>Copywriting</span><span>Analytics setup</span>
+    </div>
+  </section>
+
+  <section class="container case-section">
+    <div class="case-two-col">
+      <div>
+        <div class="page-eyebrow rv" style="margin-bottom:20px;">The process</div>
+        <div class="case-body rv">
+          <h2>Ten weeks from positioning to a live store.</h2>
+          <p>Brand and e-commerce projects have a natural dependency — the brand has to be right before the site can be designed. We compress this by running brand and component design in parallel after the core visual direction is locked, typically at the end of week three.</p>
+        </div>
+      </div>
+      <div class="rv">
+        <div class="cap-block" style="margin-bottom:24px;"><h4>Week 1–2 · Brand foundation</h4><p>Competitor analysis of 20 premium stationery brands. Positioning brief: "the memo book for people who think clearly." Visual direction: warm analog, dark editorial, obsessively precise.</p></div>
+        <div class="cap-block" style="margin-bottom:24px;"><h4>Week 2–5 · Identity + design</h4><p>Logo, type system, colour palette, photography art direction. Site architecture: homepage, collections, product pages, about, journal. All 18 screens designed in Figma.</p></div>
+        <div class="cap-block" style="margin-bottom:24px;"><h4>Week 5–9 · Build</h4><p>Custom Shopify theme with metafields for product storytelling. Subscription logic via Recharge. Performance: 94 Lighthouse average, sub-1.5s LCP.</p></div>
+        <div class="cap-block"><h4>Week 9–10 · Launch</h4><p>Product photography review, copy finalisation, email flow setup (welcome, abandon cart, post-purchase), GA4 + Meta Pixel, and a launch week paid social campaign.</p></div>
+      </div>
+    </div>
+  </section>
+
+  <section class="container case-section">
+    <div class="page-eyebrow rv" style="margin-bottom:20px;">More work</div>
+    <div class="next-case">
+      <a href="case-halycon.html" class="next-card rv">
+        <div class="nc-tag">Platform · Finance · 2025</div>
+        <div class="nc-title"><span>Halycon Capital — 84% increase in qualified pipeline.</span><span>↗</span></div>
+      </a>
+      <a href="case-atlas.html" class="next-card rv">
+        <div class="nc-tag">Growth · Industrial · 2025</div>
+        <div class="nc-title"><span>Atlas Foundry — 312% increase in organic traffic.</span><span>↗</span></div>
+      </a>
+    </div>
+  </section>
+
+</main>
+<div id="footer-mount"></div>
+<script src="page-chrome.js"></script>
+</body>
+</html>

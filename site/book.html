@@ -1,0 +1,84 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>Start a project — AceCloud</title>
+<link rel="preconnect" href="https://fonts.googleapis.com"/>
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
+<link href="https://fonts.googleapis.com/css2?family=Geist:wght@300;400;500;600&family=Geist+Mono:wght@400;500&family=Instrument+Serif:ital@0;1&display=swap" rel="stylesheet"/>
+<link rel="stylesheet" href="styles.css"/>
+<link rel="stylesheet" href="styles-v2.css"/>
+<link rel="stylesheet" href="styles-pages.css"/>
+<link rel="stylesheet" href="styles-white.css"/>
+<style>
+.book{padding:clamp(140px,18vh,200px) 0 clamp(80px,12vh,120px);min-height:100vh}
+.book .container{max-width:880px}
+.book h1{font-family:var(--display);font-weight:500;font-size:clamp(48px,7vw,96px);line-height:0.96;letter-spacing:-0.04em;margin:0 0 32px;text-wrap:balance}
+.book h1 em{font-family:"Instrument Serif",serif;font-style:italic;font-weight:400;color:var(--accent-ink)}
+.book .lede{font-family:var(--display);font-size:clamp(18px,1.4vw,22px);line-height:1.5;color:var(--mid-1);margin:0 0 64px;max-width:55ch}
+.frm{display:grid;grid-template-columns:1fr 1fr;gap:32px 28px;margin-top:48px}
+.frm .full{grid-column:span 2}
+.fld label{display:block;font-family:var(--mono);font-size:11px;letter-spacing:0.08em;text-transform:uppercase;color:var(--mid-1);margin-bottom:10px}
+.fld input,.fld select,.fld textarea{width:100%;border:none;border-bottom:1px solid var(--line);background:transparent;padding:14px 0;font-family:var(--body);font-size:17px;color:var(--ink);letter-spacing:-0.005em;outline:none;transition:border-color 0.3s}
+.fld input:focus,.fld select:focus,.fld textarea:focus{border-color:var(--ink)}
+.fld textarea{min-height:140px;resize:vertical;line-height:1.5}
+.budget-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:8px;margin-top:6px}
+.budget-grid label{position:relative;cursor:pointer}
+.budget-grid input{position:absolute;opacity:0;pointer-events:none}
+.budget-grid span{display:flex;align-items:center;justify-content:center;padding:14px 10px;border:1px solid var(--line);border-radius:var(--r-pill);font-family:var(--mono);font-size:12px;letter-spacing:0.04em;text-transform:uppercase;color:var(--mid-1);transition:all 0.25s;text-align:center}
+.budget-grid input:checked+span{background:var(--ink);color:#fff;border-color:var(--ink)}
+.book .actions{margin-top:48px;padding-top:32px;border-top:1px solid var(--line);display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:20px}
+.book .actions .promise{font-family:var(--mono);font-size:11px;letter-spacing:0.08em;text-transform:uppercase;color:var(--mid-1)}
+.book .submit{background:var(--ink);color:#fff;border:1px solid var(--ink);border-radius:var(--r-pill);padding:18px 36px;font-family:var(--display);font-weight:500;font-size:16px;cursor:pointer;transition:all 0.3s;letter-spacing:-0.01em;display:inline-flex;align-items:center;gap:14px}
+.book .submit:hover{background:var(--accent);border-color:var(--accent)}
+.success{padding:48px 0;text-align:center;border:1px solid var(--line);border-radius:var(--r-md);background:var(--accent-soft);display:none}
+.success.show{display:block}
+.success h3{font-family:var(--display);font-weight:500;font-size:32px;letter-spacing:-0.025em;margin:0 0 12px}
+.success h3 em{font-family:"Instrument Serif",serif;font-style:italic;color:var(--accent-ink)}
+@media (max-width:720px){.frm,.budget-grid{grid-template-columns:1fr}.frm .full{grid-column:auto}.budget-grid{grid-template-columns:1fr 1fr}}
+</style>
+</head>
+<body>
+<script>window.PAGE_ACTIVE="book";</script>
+<div id="nav-mount"></div>
+
+<main class="shell shell-v2">
+  <section class="book">
+    <div class="container">
+      <div style="font-family:var(--mono);font-size:11px;letter-spacing:0.08em;text-transform:uppercase;color:var(--mid-1);margin-bottom:32px">Start a project · We reply within 48 hours</div>
+      <h1>Tell us about the <em>work</em>.</h1>
+      <p class="lede">A few honest sentences beat a perfect brief. We'll come back with a written point of view, three relevant examples, and an introductory call within two business days.</p>
+
+      <div class="success" id="success">
+        <h3>Brief <em>received</em>.</h3>
+        <p style="margin:0;color:var(--mid-1)">Thank you. A partner will be in touch within 48 hours from <strong>hello@acecloud.ca</strong>.</p>
+      </div>
+
+      <form class="frm" id="brief-form" onsubmit="event.preventDefault();document.getElementById('brief-form').style.display='none';document.getElementById('success').classList.add('show');window.scrollTo({top:0,behavior:'smooth'});">
+        <div class="fld"><label>Your name</label><input type="text" name="name" required placeholder="Jane Doe"/></div>
+        <div class="fld"><label>Company</label><input type="text" name="company" placeholder="Acme Inc."/></div>
+        <div class="fld full"><label>Email</label><input type="email" name="email" required placeholder="jane@acme.com"/></div>
+        <div class="fld full">
+          <label>Estimated budget (USD)</label>
+          <div class="budget-grid">
+            <label><input type="radio" name="budget" value="24-50"/><span>$24K — $50K</span></label>
+            <label><input type="radio" name="budget" value="50-100"/><span>$50K — $100K</span></label>
+            <label><input type="radio" name="budget" value="100-250"/><span>$100K — $250K</span></label>
+            <label><input type="radio" name="budget" value="250+"/><span>$250K +</span></label>
+          </div>
+        </div>
+        <div class="fld full"><label>Tell us about the project</label><textarea name="message" required placeholder="What are you building? What's the timeline? What does success look like?"></textarea></div>
+        <div class="actions full">
+          <span class="promise">↳ Replies within 48 hours · No bots</span>
+          <button type="submit" class="submit">Send brief <span>↗</span></button>
+        </div>
+      </form>
+    </div>
+  </section>
+</main>
+
+<div id="footer-mount"></div>
+<script src="page-chrome.js"></script>
+</body>
+</html>

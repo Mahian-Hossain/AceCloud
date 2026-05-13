@@ -1,0 +1,99 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>Digital Systems — AceCloud</title>
+<meta name="description" content="Internal tools, dashboards, admin panels and product-adjacent surfaces designed and built at brand pace. Embedded design and engineering for product teams shipping every week."/>
+<link rel="preconnect" href="https://fonts.googleapis.com"/>
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
+<link href="https://fonts.googleapis.com/css2?family=Geist:wght@300;400;500;600&family=Geist+Mono:wght@400;500&family=Instrument+Serif:ital@0;1&display=swap" rel="stylesheet"/>
+<link rel="stylesheet" href="styles.css"/>
+<link rel="stylesheet" href="styles-v2.css"/>
+<link rel="stylesheet" href="styles-pages.css"/>
+<style>
+.serif-italic{font-family:"Instrument Serif",serif!important;font-style:italic;font-weight:400}
+.svc-faq { padding: clamp(80px,12vh,140px) 0; border-top: 1px solid var(--line); }
+.svc-faq .container { max-width: 900px; }
+.faq-item { border-bottom: 1px solid var(--line); padding: 28px 0; }
+.faq-item h4 { font-family: var(--display); font-weight: 500; font-size: clamp(18px,1.5vw,24px); letter-spacing: -0.02em; margin: 0 0 14px; }
+.faq-item p { font-size: 15.5px; line-height: 1.6; color: var(--mid-1); margin: 0; max-width: 70ch; }
+.svc-cta { padding: clamp(80px,12vh,140px) 0; }
+.svc-cta-inner { background: var(--ink); color: var(--paper); border-radius: var(--r-lg); padding: clamp(48px,8vh,100px) clamp(28px,5vw,80px); text-align: center; }
+.svc-cta-inner h2 { font-family: var(--display); font-weight: 500; font-size: clamp(36px,6vw,96px); letter-spacing: -0.04em; line-height: 0.95; margin: 0 0 28px; }
+.svc-cta-inner h2 em { font-family: "Instrument Serif",serif; font-style: italic; font-weight: 400; color: rgba(250,250,247,0.5); }
+.svc-cta-inner p { font-size: clamp(16px,1.3vw,20px); color: rgba(250,250,247,0.65); max-width: 52ch; margin: 0 auto 40px; line-height: 1.5; }
+.btn-light { background: var(--paper); color: var(--ink); padding: 16px 30px; border-radius: var(--r-pill); font-family: var(--display); font-weight: 500; font-size: 15px; display: inline-flex; align-items: center; gap: 10px; text-decoration: none; border: none; cursor: pointer; transition: transform 0.35s cubic-bezier(0.34,1.56,0.64,1), box-shadow 0.3s; position: relative; overflow: hidden; }
+.btn-light::after { content: ""; position: absolute; inset: 0; background: var(--accent); transform: scaleX(0); transform-origin: left center; transition: transform 0.45s cubic-bezier(0.2,0.8,0.2,1); }
+.btn-light > * { position: relative; z-index: 1; }
+.btn-light:hover { transform: translateY(-2px); box-shadow: 0 8px 28px rgba(250,250,247,0.15); }
+.btn-light:hover::after { transform: scaleX(1); }
+</style>
+</head>
+<body>
+<script>window.PAGE_ACTIVE="services";</script>
+<div id="nav-mount"></div>
+<main class="shell shell-v2">
+
+  <section class="container page-hero">
+    <div class="page-eyebrow rv"><span class="num">05</span>Service · Digital Systems</div>
+    <h1 class="page-title rv">The surfaces your product team <em>never has time for</em>.</h1>
+    <p class="page-lede rv">Every growing company has the same list: the admin panel that's held together with duct tape, the dashboard your ops team hates using, the onboarding flow that hasn't been touched since launch. These surfaces are often the highest-leverage design work in the company. We design and build them at brand pace so your product team can focus on core product.</p>
+    <div class="page-meta">
+      <div class="rv"><div class="l">Engagement type</div><div class="v">Project or retainer</div></div>
+      <div class="rv"><div class="l">Stack</div><div class="v">React · Next.js</div></div>
+      <div class="rv"><div class="l">Starting at</div><div class="v">$14K</div></div>
+      <div class="rv"><div class="l">Timeline</div><div class="v">4 – 12 wks</div></div>
+    </div>
+  </section>
+
+  <section class="cap-section" id="included">
+    <div class="container cap-grid">
+      <div class="head rv">
+        <div class="cn">What we build</div>
+        <h3>The un-loved surfaces that compound brand equity.</h3>
+        <p class="pitch">Product UI, internal tooling and ops dashboards — designed to the same standard as your public-facing site.</p>
+      </div>
+      <div class="body">
+        <div class="cap-block rv"><h4>Product UI</h4><p>Auth flows, settings pages, billing UIs, onboarding sequences, empty states, error screens and the other product surfaces your design team never quite gets to. We design them as a coherent system, not a collection of one-offs.</p></div>
+        <div class="cap-block rv"><h4>Internal tools &amp; dashboards</h4><p>Admin panels, operations dashboards, data visualisation UIs, ETL interfaces and back-office workflows. Often the highest-ROI design investment a company can make — your ops team uses these tools every day.</p></div>
+        <div class="cap-block rv"><h4>Design-to-code</h4><p>We design and build these surfaces — no handoff to a separate team. Components built against your existing design system (or we'll create one). TypeScript, accessible, documented.</p></div>
+        <div class="cap-deliv rv"><span>Product UI</span><span>Admin panels</span><span>Dashboards</span><span>Onboarding flows</span><span>Internal tooling</span><span>Data visualisation</span></div>
+      </div>
+    </div>
+  </section>
+
+  <section class="svc-faq">
+    <div class="container">
+      <div class="page-eyebrow rv">Questions</div>
+      <h2 class="page-title rv" style="font-size:clamp(36px,5vw,72px)">Honest answers.</h2>
+      <div class="faq-item rv">
+        <h4>How do you work alongside our existing product team?</h4>
+        <p>We integrate into your workflow — standups, sprint planning, Jira or Linear, whatever you're using. We act like a pod, not a vendor. You get senior design and engineering capacity without a full-time hire. We typically embed for a minimum of three months.</p>
+      </div>
+      <div class="faq-item rv">
+        <h4>Can you build on our existing codebase?</h4>
+        <p>Yes. We do a codebase audit first and document the component library we'll build on top of. If the existing code is in rough shape, we'll tell you honestly and scope a cleanup alongside the new work.</p>
+      </div>
+      <div class="faq-item rv">
+        <h4>Do you do UX research?</h4>
+        <p>Yes — user interviews, usability testing, session recording analysis and quantitative funnel analysis. For internal tools, we run workflow interviews with the actual users (usually your ops or sales team) before we design anything.</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="svc-cta">
+    <div class="container">
+      <div class="svc-cta-inner rv">
+        <h2>Tell us which surface is <em>costing you</em> the most.</h2>
+        <p>We'll come back with a scope and a point of view within 48 hours. No pitch required.</p>
+        <a href="book.html" class="btn-light"><span>Start a conversation</span><span>↗</span></a>
+      </div>
+    </div>
+  </section>
+
+</main>
+<div id="footer-mount"></div>
+<script src="page-chrome.js"></script>
+</body>
+</html>

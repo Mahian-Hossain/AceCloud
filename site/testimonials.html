@@ -1,0 +1,57 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>Testimonials — AceCloud</title>
+<link rel="preconnect" href="https://fonts.googleapis.com"/>
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
+<link href="https://fonts.googleapis.com/css2?family=Geist:wght@300;400;500;600&family=Geist+Mono:wght@400;500&family=Instrument+Serif:ital@0;1&display=swap" rel="stylesheet"/>
+<link rel="stylesheet" href="styles.css"/>
+<link rel="stylesheet" href="styles-v2.css"/>
+<link rel="stylesheet" href="styles-pages.css"/>
+<link rel="stylesheet" href="styles-white.css"/>
+<link rel="stylesheet" href="styles-nav.css"/>
+<style>
+.tst-grid{padding:clamp(40px,6vh,80px) 0 clamp(80px,12vh,120px);display:grid;grid-template-columns:1fr 1fr;gap:32px}
+.tst{border:1px solid var(--line);border-radius:18px;padding:40px;background:var(--paper);display:flex;flex-direction:column;gap:24px}
+.tst.featured{grid-column:span 2;background:var(--accent-soft)}
+.tst q{display:block;font-family:var(--display);font-weight:500;font-size:clamp(20px,2vw,26px);line-height:1.35;letter-spacing:-0.02em;quotes:none;color:var(--ink);margin:0}
+.tst.featured q{font-size:clamp(28px,3vw,42px);font-weight:400;line-height:1.2;letter-spacing:-0.03em}
+.tst q::before{content:"\201C";color:var(--accent);margin-right:2px}
+.tst q::after{content:"\201D";color:var(--accent);margin-left:2px}
+.tst q em{font-family:"Instrument Serif",serif;font-style:italic;font-weight:400;color:var(--accent-ink)}
+.tst .who{display:flex;align-items:center;gap:14px;margin-top:auto;padding-top:20px;border-top:1px solid var(--line)}
+.tst .av{width:44px;height:44px;border-radius:50%;background:linear-gradient(140deg,oklch(0.85 0.04 250),oklch(0.7 0.08 250));display:flex;align-items:center;justify-content:center;color:#fff;font-family:var(--display);font-weight:500;font-size:14px;letter-spacing:-0.02em;flex-shrink:0}
+.tst .who .name{font-family:var(--display);font-weight:500;font-size:15px;letter-spacing:-0.01em}
+.tst .who .role{font-family:var(--mono);font-size:11px;color:var(--mid-1);letter-spacing:0.06em;text-transform:uppercase;margin-top:2px}
+@media (max-width:780px){.tst-grid,.tst.featured{grid-template-columns:1fr;grid-column:auto}}
+</style>
+</head>
+<body>
+<script>window.PAGE_ACTIVE="testimonials";</script>
+<div id="nav-mount"></div>
+<main class="shell shell-v2">
+  <section class="container page-hero">
+    <div class="page-eyebrow rv"><span class="num">★</span>What clients say</div>
+    <h1 class="page-title rv">In their own <em>words</em>.</h1>
+    <p class="page-lede rv">Reference customers do most of our marketing. Here's what they've said publicly. The rest is available on request.</p>
+  </section>
+
+  <section class="container tst-grid">
+    <div class="tst featured rv">
+      <q>AceCloud rebuilt our identity, marketing site and growth stack in fourteen weeks. Pipeline doubled in the first quarter post-launch. They behave like an in-house team you'd <em>kill</em> to hire.</q>
+      <div class="who"><div class="av">SR</div><div><div class="name">Sarah Reyes</div><div class="role">VP Marketing · Northwind</div></div></div>
+    </div>
+    <div class="tst rv"><q>The most senior team we've worked with in a decade. Every meeting moved the work forward. Zero account management overhead.</q><div class="who"><div class="av" style="background:linear-gradient(140deg,oklch(0.85 0.04 70),oklch(0.7 0.08 50))">DC</div><div><div class="name">David Chen</div><div class="role">Founder · Halycon Capital</div></div></div></div>
+    <div class="tst rv"><q>Our Lighthouse score went from 41 to 98 and our cost per qualified lead dropped 60%. The brand work was just the entry point.</q><div class="who"><div class="av" style="background:linear-gradient(140deg,#1A1A20,#2A2A30)">PJ</div><div><div class="name">Priya Jain</div><div class="role">Head of Growth · Mercato</div></div></div></div>
+    <div class="tst rv"><q>They argued the strategy on paper before drawing a single thing. By the time we saw Figma, half the decisions were already made — and they were right.</q><div class="who"><div class="av" style="background:linear-gradient(140deg,oklch(0.85 0.04 130),oklch(0.7 0.08 130))">MK</div><div><div class="name">Marcus King</div><div class="role">CEO · Fieldnotes</div></div></div></div>
+    <div class="tst rv"><q>We tried two agencies before AceCloud. They were the only ones who treated our pricing page as the highest-leverage surface on the site. Demo rate is up 2.4× since.</q><div class="who"><div class="av" style="background:linear-gradient(140deg,oklch(0.7 0.12 320),oklch(0.5 0.14 300))">LT</div><div><div class="name">Lara Thornton</div><div class="role">CMO · Parallel</div></div></div></div>
+    <div class="tst rv"><q>The handover document alone was worth what we paid. Our in-house team has been shipping on the system for nine months without us needing to call them.</q><div class="who"><div class="av" style="background:linear-gradient(140deg,oklch(0.85 0.04 30),oklch(0.7 0.08 30))">AR</div><div><div class="name">Adrian Roth</div><div class="role">Design Director · Outset</div></div></div></div>
+    <div class="tst rv"><q>Genuinely the only agency I'd recommend without caveats. They are deliberately small, deliberately senior, and they earn every dollar.</q><div class="who"><div class="av" style="background:linear-gradient(140deg,oklch(0.7 0.12 30),oklch(0.5 0.16 25))">EM</div><div><div class="name">Emma Mitchell</div><div class="role">Founder · Lumen Bio</div></div></div></div>
+  </section>
+</main>
+<div id="footer-mount"></div>
+<script src="page-chrome.js"></script>
+</body>
+</html>

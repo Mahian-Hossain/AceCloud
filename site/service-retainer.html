@@ -1,0 +1,178 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>Retainer Partnership — AceCloud</title>
+<meta name="description" content="Embedded design and engineering capacity for teams shipping every week. One dedicated pod, on-call. No handoffs, no project delays, no vendor management overhead."/>
+<link rel="preconnect" href="https://fonts.googleapis.com"/>
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
+<link href="https://fonts.googleapis.com/css2?family=Geist:wght@300;400;500;600&family=Geist+Mono:wght@400;500&family=Instrument+Serif:ital@0;1&display=swap" rel="stylesheet"/>
+<link rel="stylesheet" href="styles.css"/>
+<link rel="stylesheet" href="styles-v2.css"/>
+<link rel="stylesheet" href="styles-pages.css"/>
+<style>
+.serif-italic{font-family:"Instrument Serif",serif!important;font-style:italic;font-weight:400}
+.svc-faq { padding: clamp(80px,12vh,140px) 0; border-top: 1px solid var(--line); }
+.svc-faq .container { max-width: 900px; }
+.faq-item { border-bottom: 1px solid var(--line); padding: 28px 0; }
+.faq-item h4 { font-family: var(--display); font-weight: 500; font-size: clamp(18px,1.5vw,24px); letter-spacing: -0.02em; margin: 0 0 14px; }
+.faq-item p { font-size: 15.5px; line-height: 1.6; color: var(--mid-1); margin: 0; max-width: 70ch; }
+.retainer-tiers { display: grid; grid-template-columns: repeat(3,1fr); gap: 24px; margin-top: clamp(48px,7vh,80px); }
+.tier-card { border: 1px solid var(--line); border-radius: var(--r-lg); padding: 36px; display: flex; flex-direction: column; gap: 20px; }
+.tier-card.featured { background: var(--ink); color: var(--paper); border-color: var(--ink); }
+.tier-card .t-label { font-family: var(--mono); font-size: 11px; text-transform: uppercase; letter-spacing: 0.08em; color: var(--mid-1); }
+.tier-card.featured .t-label { color: rgba(250,250,247,0.55); }
+.tier-card .t-name { font-family: var(--display); font-weight: 500; font-size: clamp(24px,2.5vw,36px); letter-spacing: -0.025em; margin: 0; }
+.tier-card .t-price { font-family: var(--display); font-size: clamp(32px,3.5vw,52px); font-weight: 400; letter-spacing: -0.03em; margin: 0; }
+.tier-card .t-price span { font-family: var(--mono); font-size: 13px; color: var(--mid-1); }
+.tier-card.featured .t-price span { color: rgba(250,250,247,0.55); }
+.tier-card .t-items { list-style: none; padding: 0; margin: 0; display: flex; flex-direction: column; gap: 10px; }
+.tier-card .t-items li { font-size: 14.5px; line-height: 1.45; padding-left: 20px; position: relative; color: var(--ink-2); }
+.tier-card.featured .t-items li { color: rgba(250,250,247,0.8); }
+.tier-card .t-items li::before { content: "→"; position: absolute; left: 0; color: var(--accent); font-size: 12px; }
+.tier-cta { margin-top: auto; display: block; text-align: center; padding: 13px 20px; border-radius: var(--r-pill); font-family: var(--display); font-weight: 500; font-size: 14px; text-decoration: none; border: 1px solid var(--line); color: var(--ink); transition: background 0.3s, color 0.3s, border-color 0.3s; }
+.tier-card.featured .tier-cta { background: var(--paper); color: var(--ink); border-color: var(--paper); }
+.tier-cta:hover { background: var(--ink); color: var(--paper); border-color: var(--ink); }
+.tier-card.featured .tier-cta:hover { background: var(--accent); color: var(--paper); border-color: var(--accent); }
+.svc-cta { padding: clamp(80px,12vh,140px) 0; }
+.svc-cta-inner { background: var(--ink); color: var(--paper); border-radius: var(--r-lg); padding: clamp(48px,8vh,100px) clamp(28px,5vw,80px); text-align: center; }
+.svc-cta-inner h2 { font-family: var(--display); font-weight: 500; font-size: clamp(36px,6vw,96px); letter-spacing: -0.04em; line-height: 0.95; margin: 0 0 28px; }
+.svc-cta-inner h2 em { font-family: "Instrument Serif",serif; font-style: italic; font-weight: 400; color: rgba(250,250,247,0.5); }
+.svc-cta-inner p { font-size: clamp(16px,1.3vw,20px); color: rgba(250,250,247,0.65); max-width: 52ch; margin: 0 auto 40px; line-height: 1.5; }
+.btn-light { background: var(--paper); color: var(--ink); padding: 16px 30px; border-radius: var(--r-pill); font-family: var(--display); font-weight: 500; font-size: 15px; display: inline-flex; align-items: center; gap: 10px; text-decoration: none; border: none; cursor: pointer; transition: transform 0.35s cubic-bezier(0.34,1.56,0.64,1), box-shadow 0.3s; position: relative; overflow: hidden; }
+.btn-light::after { content: ""; position: absolute; inset: 0; background: var(--accent); transform: scaleX(0); transform-origin: left center; transition: transform 0.45s cubic-bezier(0.2,0.8,0.2,1); }
+.btn-light > * { position: relative; z-index: 1; }
+.btn-light:hover { transform: translateY(-2px); box-shadow: 0 8px 28px rgba(250,250,247,0.15); }
+.btn-light:hover::after { transform: scaleX(1); }
+@media (max-width:768px) { .retainer-tiers { grid-template-columns: 1fr; } }
+</style>
+</head>
+<body>
+<script>window.PAGE_ACTIVE="services";</script>
+<div id="nav-mount"></div>
+<main class="shell shell-v2">
+
+  <section class="container page-hero">
+    <div class="page-eyebrow rv"><span class="num">06</span>Service · Retainer</div>
+    <h1 class="page-title rv">A design and engineering pod, <em>on-call</em>.</h1>
+    <p class="page-lede rv">For companies that ship every week, a project-based agency relationship creates constant overhead: scoping calls, briefs, invoices, handoffs. Our retainer model removes all of that. You get a dedicated senior pod — design and engineering — embedded in your workflow, attending your standups and shipping on your cadence. No project overhead. Just output.</p>
+    <div class="page-meta">
+      <div class="rv"><div class="l">Minimum term</div><div class="v">3 months</div></div>
+      <div class="rv"><div class="l">Capacity</div><div class="v">4 active / quarter</div></div>
+      <div class="rv"><div class="l">Response time</div><div class="v">Same-day</div></div>
+      <div class="rv"><div class="l">Starting at</div><div class="v">$8K / mo</div></div>
+    </div>
+  </section>
+
+  <section class="cap-section">
+    <div class="container">
+      <div class="page-eyebrow rv">Pricing</div>
+      <h2 class="page-title rv" style="font-size:clamp(36px,5vw,72px)">Three tiers, honest pricing.</h2>
+      <div class="retainer-tiers">
+        <div class="tier-card rv">
+          <div class="t-label">Starter</div>
+          <div class="t-name">Design Pod</div>
+          <div class="t-price">$8K<span> / month</span></div>
+          <ul class="t-items">
+            <li>1 senior designer, embedded</li>
+            <li>2 design sprints per month</li>
+            <li>Async design reviews</li>
+            <li>Figma component library access</li>
+            <li>Monthly strategy session</li>
+            <li>48h turnaround on ad-hoc requests</li>
+          </ul>
+          <a href="book.html" class="tier-cta">Start with Design Pod</a>
+        </div>
+        <div class="tier-card featured rv">
+          <div class="t-label">Most popular</div>
+          <div class="t-name">Full Stack Pod</div>
+          <div class="t-price">$18K<span> / month</span></div>
+          <ul class="t-items">
+            <li>1 senior designer + 1 senior engineer</li>
+            <li>4 sprints per month, 2-week cycles</li>
+            <li>Weekly demo + written brief</li>
+            <li>Design system ownership</li>
+            <li>Growth infrastructure (SEO + analytics)</li>
+            <li>Same-day response to urgent requests</li>
+            <li>Monthly exec review</li>
+          </ul>
+          <a href="book.html" class="tier-cta">Start with Full Stack</a>
+        </div>
+        <div class="tier-card rv">
+          <div class="t-label">Scale</div>
+          <div class="t-name">Growth Pod</div>
+          <div class="t-price">$28K<span> / month</span></div>
+          <ul class="t-items">
+            <li>2 senior designers + 2 senior engineers</li>
+            <li>Full growth infrastructure team</li>
+            <li>A/B testing system, 2 experiments/week</li>
+            <li>Weekly paid media management</li>
+            <li>Technical SEO + programmatic content</li>
+            <li>Dedicated Slack channel + on-call</li>
+            <li>Quarterly brand review</li>
+          </ul>
+          <a href="book.html" class="tier-cta">Start with Growth Pod</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="cap-section">
+    <div class="container cap-grid">
+      <div class="head rv">
+        <div class="cn">How it works</div>
+        <h3>Less overhead. More output.</h3>
+        <p class="pitch">We integrate into your workflow like a senior hire — just without the recruitment, onboarding, benefits and notice period.</p>
+      </div>
+      <div class="body">
+        <div class="cap-block rv"><h4>Week 1 · Onboarding</h4><p>We review your existing design system, codebase, analytics setup and roadmap. We attend standups, get access to your tools (Figma, Linear, GitHub, Slack) and agree on a sprint cadence that fits your team's rhythm.</p></div>
+        <div class="cap-block rv"><h4>Ongoing · Sprints</h4><p>Two-week design and engineering cycles with a written brief at the start of every sprint. Weekly demo on Fridays. We ship behind a feature flag so you can review before anything goes to production.</p></div>
+        <div class="cap-block rv"><h4>Monthly · Review</h4><p>End-of-month review covering output, metrics movement, design system health and the next quarter's priorities. We also run a retrospective — what we shipped, what we'd do differently and what we're doubling down on.</p></div>
+        <div class="cap-block rv"><h4>Quarterly · Strategy</h4><p>A written strategic review of your digital presence — brand consistency, site performance, growth metrics and roadmap alignment. Includes recommendations for the next quarter and a prioritised backlog of high-leverage work.</p></div>
+      </div>
+    </div>
+  </section>
+
+  <section class="svc-faq">
+    <div class="container">
+      <div class="page-eyebrow rv">Questions</div>
+      <h2 class="page-title rv" style="font-size:clamp(36px,5vw,72px)">Straight answers on retainers.</h2>
+      <div class="faq-item rv">
+        <h4>What's the minimum commitment?</h4>
+        <p>Three months. This gives us enough time to onboard, understand your codebase and brand system, ship meaningful work and demonstrate results. Month-to-month arrangements are available after the initial three-month term at a 15% premium.</p>
+      </div>
+      <div class="faq-item rv">
+        <h4>What if we don't have enough work one month?</h4>
+        <p>Retainer hours roll forward one month. If you're consistently under-utilising the pod, we'll have an honest conversation about whether you need a smaller tier or a different engagement model. We'd rather have you on the right plan than paying for capacity you're not using.</p>
+      </div>
+      <div class="faq-item rv">
+        <h4>Can we pause or cancel?</h4>
+        <p>30 days notice to pause or cancel after the initial three-month term. No penalty, no hard feelings. We hand over everything — code, Figma files, documentation — in a structured offboarding session.</p>
+      </div>
+      <div class="faq-item rv">
+        <h4>We have an in-house designer. Can we still use a retainer?</h4>
+        <p>Absolutely. Many of our retainer clients have in-house designers. We typically handle the more complex engineering work, growth infrastructure and overflow design capacity so your in-house team can focus on core product. We integrate alongside your team, not on top of it.</p>
+      </div>
+      <div class="faq-item rv">
+        <h4>How many retainer clients do you take on?</h4>
+        <p>A maximum of four active retainer clients at any time. This is a hard limit — it's what keeps the senior people in the work. If we're at capacity we'll tell you directly and offer to put you on a waitlist.</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="svc-cta">
+    <div class="container">
+      <div class="svc-cta-inner rv">
+        <h2>One pod. Full stack. <em>On your calendar</em>.</h2>
+        <p>Tell us your shipping cadence and what's slowing you down. We'll recommend the right tier and get you started within two weeks.</p>
+        <a href="book.html" class="btn-light"><span>Start a retainer</span><span>↗</span></a>
+      </div>
+    </div>
+  </section>
+
+</main>
+<div id="footer-mount"></div>
+<script src="page-chrome.js"></script>
+</body>
+</html>

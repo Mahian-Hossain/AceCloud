@@ -1,0 +1,278 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>Parallel — AceCloud Case Study</title>
+<meta name="description" content="How AceCloud designed and built a terminal-native marketing site for Parallel, the developer workflow tool trusted by 12,000+ engineers."/>
+<link rel="preconnect" href="https://fonts.googleapis.com"/>
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
+<link href="https://fonts.googleapis.com/css2?family=Geist:wght@300;400;500;600&family=Geist+Mono:wght@400;500&family=Instrument+Serif:ital@0;1&display=swap" rel="stylesheet"/>
+<link rel="stylesheet" href="styles.css"/>
+<link rel="stylesheet" href="styles-v2.css"/>
+<link rel="stylesheet" href="styles-pages.css"/>
+<link rel="stylesheet" href="styles-cases.css"/>
+<style>
+.serif-italic{font-family:"Instrument Serif",serif!important;font-style:italic;font-weight:400}
+</style>
+</head>
+<body>
+<script>window.PAGE_ACTIVE="portfolio";</script>
+<div id="nav-mount"></div>
+<main class="shell shell-v2">
+
+  <section class="container page-hero">
+    <h1 class="page-title rv">A marketing site as sharp as the <em>tool it sells.</em></h1>
+    <p class="page-lede rv">Parallel had 12,000 engineers using their workflow automation tool. Their site still looked like a 2019 Webflow template. We designed and built a terminal-native marketing site that matches the precision of the product — and drove signups 2.4× in the first eight weeks.</p>
+    <div class="page-meta">
+      <div class="rv"><div class="l">Client</div><div class="v">Parallel</div></div>
+      <div class="rv"><div class="l">Scope</div><div class="v">Design + Build</div></div>
+      <div class="rv"><div class="l">Timeline</div><div class="v">8 weeks</div></div>
+      <div class="rv"><div class="l">Result</div><div class="v">2.4× increase in signups</div></div>
+    </div>
+  </section>
+
+  <!-- Hero browser mockup -->
+  <div class="container">
+    <div class="browser-frame rv">
+      <div class="browser-bar">
+        <div class="browser-dots"><span></span><span></span><span></span></div>
+        <div class="browser-url">parallel.so</div>
+      </div>
+      <div class="browser-content">
+        <svg viewBox="0 0 1200 680" preserveAspectRatio="xMidYMid slice" style="width:100%;height:100%;display:block;">
+          <rect width="1200" height="680" fill="#0D0D0D"/>
+          <!-- Nav -->
+          <rect width="1200" height="56" fill="#111111"/>
+          <text x="40" y="34" font-family="Geist Mono, monospace" font-size="15" font-weight="500" fill="white" letter-spacing="-0.3">parallel/</text>
+          <text x="380" y="34" font-family="Geist, sans-serif" font-size="13" fill="rgba(255,255,255,0.5)">Docs</text>
+          <text x="440" y="34" font-family="Geist, sans-serif" font-size="13" fill="rgba(255,255,255,0.5)">Changelog</text>
+          <text x="530" y="34" font-family="Geist, sans-serif" font-size="13" fill="rgba(255,255,255,0.5)">Pricing</text>
+          <text x="610" y="34" font-family="Geist, sans-serif" font-size="13" fill="rgba(255,255,255,0.5)">Blog</text>
+          <rect x="1060" y="18" width="100" height="30" rx="6" fill="#5B5BD6"/>
+          <text x="1110" y="37" font-family="Geist, sans-serif" font-size="12" font-weight="500" fill="white" text-anchor="middle">Get started</text>
+          <!-- Hero -->
+          <text x="40" y="130" font-family="Geist Mono, monospace" font-size="11" fill="#5B5BD6" letter-spacing="2">$ parallel --version 2.4.1</text>
+          <text x="40" y="230" font-family="Geist, sans-serif" font-size="68" font-weight="600" fill="white" letter-spacing="-2">Ship workflows,</text>
+          <text x="40" y="305" font-family="Geist, sans-serif" font-size="68" font-weight="600" fill="white" letter-spacing="-2">not friction.</text>
+          <text x="40" y="365" font-family="Geist, sans-serif" font-size="17" fill="rgba(255,255,255,0.5)" letter-spacing="-0.2">The developer workflow engine used by engineering teams at</text>
+          <text x="40" y="390" font-family="Geist, sans-serif" font-size="17" fill="rgba(255,255,255,0.5)">Vercel, Linear, and 12,000+ others.</text>
+          <rect x="40" y="420" width="140" height="44" rx="8" fill="#5B5BD6"/>
+          <text x="110" y="447" font-family="Geist, sans-serif" font-size="14" font-weight="500" fill="white" text-anchor="middle">Install free</text>
+          <rect x="200" y="420" width="160" height="44" rx="8" fill="transparent" stroke="rgba(255,255,255,0.15)" stroke-width="1"/>
+          <text x="280" y="447" font-family="Geist, sans-serif" font-size="14" fill="rgba(255,255,255,0.7)" text-anchor="middle">View docs →</text>
+          <!-- Terminal preview -->
+          <rect x="640" y="80" width="520" height="320" rx="10" fill="#1A1A1A" stroke="rgba(255,255,255,0.08)" stroke-width="1"/>
+          <rect x="640" y="80" width="520" height="32" rx="10" fill="#222222"/>
+          <rect x="640" y="100" width="520" height="12" fill="#222222"/>
+          <circle cx="660" cy="97" r="5" fill="#FF5F57"/>
+          <circle cx="676" cy="97" r="5" fill="#FFBD2E"/>
+          <circle cx="692" cy="97" r="5" fill="#28CA41"/>
+          <text x="660" y="135" font-family="Geist Mono, monospace" font-size="12" fill="rgba(255,255,255,0.4)">$ parallel run deploy</text>
+          <text x="660" y="158" font-family="Geist Mono, monospace" font-size="12" fill="rgba(255,255,255,0.4)">→ resolving 14 tasks...</text>
+          <text x="660" y="181" font-family="Geist Mono, monospace" font-size="12" fill="rgba(255,255,255,0.3)">  ✓ lint           42ms</text>
+          <text x="660" y="204" font-family="Geist Mono, monospace" font-size="12" fill="rgba(255,255,255,0.3)">  ✓ typecheck      91ms</text>
+          <text x="660" y="227" font-family="Geist Mono, monospace" font-size="12" fill="rgba(255,255,255,0.3)">  ✓ test           218ms</text>
+          <text x="660" y="250" font-family="Geist Mono, monospace" font-size="12" fill="rgba(255,255,255,0.3)">  ✓ build          1.4s</text>
+          <text x="660" y="273" font-family="Geist Mono, monospace" font-size="12" fill="rgba(255,255,255,0.3)">  → deploying to edge...</text>
+          <text x="660" y="296" font-family="Geist Mono, monospace" font-size="12" fill="#4ADE80">  ✓ live in 3.8s  ████████████ done</text>
+          <text x="660" y="322" font-family="Geist Mono, monospace" font-size="11" fill="rgba(255,255,255,0.2)">pipeline: 14 tasks · 0 failed · saved 4.2min</text>
+          <!-- Logo strip -->
+          <text x="40" y="510" font-family="Geist Mono, monospace" font-size="10" fill="rgba(255,255,255,0.2)" letter-spacing="2">USED BY TEAMS AT</text>
+          <text x="40" y="545" font-family="Geist, sans-serif" font-size="17" font-weight="500" fill="rgba(255,255,255,0.18)" letter-spacing="-0.3">Vercel</text>
+          <text x="150" y="545" font-family="Geist, sans-serif" font-size="17" font-weight="500" fill="rgba(255,255,255,0.18)" letter-spacing="-0.3">Linear</text>
+          <text x="265" y="545" font-family="Geist, sans-serif" font-size="17" font-weight="500" fill="rgba(255,255,255,0.18)" letter-spacing="-0.3">Resend</text>
+          <text x="390" y="545" font-family="Geist, sans-serif" font-size="17" font-weight="500" fill="rgba(255,255,255,0.18)" letter-spacing="-0.3">Liveblocks</text>
+          <text x="550" y="545" font-family="Geist, sans-serif" font-size="17" font-weight="500" fill="rgba(255,255,255,0.18)" letter-spacing="-0.3">Railway</text>
+          <!-- Feature cards -->
+          <rect x="40" y="590" width="220" height="72" rx="8" fill="#161616" stroke="rgba(255,255,255,0.07)" stroke-width="1"/>
+          <text x="60" y="620" font-family="Geist Mono, monospace" font-size="10" fill="#5B5BD6" letter-spacing="1">PARALLEL EXECUTION</text>
+          <text x="60" y="644" font-family="Geist, sans-serif" font-size="13" fill="rgba(255,255,255,0.6)">Run 1000s of tasks simultaneously</text>
+          <rect x="280" y="590" width="220" height="72" rx="8" fill="#161616" stroke="rgba(255,255,255,0.07)" stroke-width="1"/>
+          <text x="300" y="620" font-family="Geist Mono, monospace" font-size="10" fill="#5B5BD6" letter-spacing="1">SMART CACHING</text>
+          <text x="300" y="644" font-family="Geist, sans-serif" font-size="13" fill="rgba(255,255,255,0.6)">Never run the same work twice</text>
+          <rect x="520" y="590" width="220" height="72" rx="8" fill="#161616" stroke="rgba(255,255,255,0.07)" stroke-width="1"/>
+          <text x="540" y="620" font-family="Geist Mono, monospace" font-size="10" fill="#5B5BD6" letter-spacing="1">ZERO CONFIG</text>
+          <text x="540" y="644" font-family="Geist, sans-serif" font-size="13" fill="rgba(255,255,255,0.6)">Works with your existing repo</text>
+        </svg>
+      </div>
+    </div>
+  </div>
+
+  <!-- Challenge + Approach -->
+  <section class="container case-section">
+    <div class="case-two-col">
+      <div>
+        <div class="page-eyebrow rv" style="margin-bottom:20px;">The challenge</div>
+        <div class="case-body rv">
+          <p>Parallel had achieved product-market fit quietly. 12,000 engineers found them via word-of-mouth and Hacker News threads — the site was never the acquisition channel. But with a Series A fundraise on the horizon, their investors made it clear: the site needed to match the product's reputation.</p>
+          <p>The brief had a hard constraint: developers are the audience, and developers are deeply sceptical of marketing. The site had to feel like it was built by engineers for engineers — not by a marketing team that had once met an engineer.</p>
+        </div>
+      </div>
+      <div>
+        <div class="page-eyebrow rv" style="margin-bottom:20px;">Our approach</div>
+        <div class="case-body rv">
+          <p>We started with a week of user research — interviews with 12 power users from companies like Vercel, Resend, and Railway. The consistent signal: developers trust benchmarks, changelogs, and documentation quality. They distrust adjectives. The site needed to show, not tell.</p>
+          <p>The design direction: terminal-native. Every section earns its space with actual data — real benchmark numbers, real CLI output, real uptime stats. The dark theme isn't aesthetic — it's functional, matching the environment where developers actually work.</p>
+          <p>Built on Next.js 14 with MDX-powered docs and a custom changelog system. 98 Lighthouse. Shipped in 8 weeks including a complete documentation redesign.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Interior pages trio -->
+  <div class="container">
+    <div class="mockup-trio rv">
+      <div class="browser-frame" style="margin:0;">
+        <div class="mini-browser-bar"><div class="mini-dots"><span></span><span></span><span></span></div></div>
+        <svg viewBox="0 0 400 300" style="display:block;width:100%;">
+          <rect width="400" height="300" fill="#0D0D0D"/>
+          <text x="20" y="40" font-family="Geist Mono, monospace" font-size="10" fill="rgba(255,255,255,0.3)" letter-spacing="1">PRICING</text>
+          <text x="20" y="72" font-family="Geist, sans-serif" font-size="20" font-weight="600" fill="white" letter-spacing="-0.5">Simple, usage-based.</text>
+          <rect x="20" y="95" width="170" height="180" rx="8" fill="#161616" stroke="rgba(255,255,255,0.1)" stroke-width="1"/>
+          <text x="36" y="122" font-family="Geist Mono, monospace" font-size="9" fill="rgba(255,255,255,0.4)" letter-spacing="1">FREE</text>
+          <text x="36" y="152" font-family="Geist, sans-serif" font-size="28" font-weight="600" fill="white">$0</text>
+          <text x="36" y="172" font-family="Geist, sans-serif" font-size="11" fill="rgba(255,255,255,0.35)">up to 5 devs</text>
+          <line x1="36" y1="192" x2="174" y2="192" stroke="rgba(255,255,255,0.07)"/>
+          <text x="36" y="214" font-family="Geist Mono, monospace" font-size="9" fill="rgba(255,255,255,0.35)">✓ unlimited tasks</text>
+          <text x="36" y="232" font-family="Geist Mono, monospace" font-size="9" fill="rgba(255,255,255,0.35)">✓ local caching</text>
+          <text x="36" y="250" font-family="Geist Mono, monospace" font-size="9" fill="rgba(255,255,255,0.35)">✓ 5 integrations</text>
+          <rect x="210" y="95" width="170" height="180" rx="8" fill="#5B5BD6"/>
+          <text x="226" y="122" font-family="Geist Mono, monospace" font-size="9" fill="rgba(255,255,255,0.7)" letter-spacing="1">PRO</text>
+          <text x="226" y="152" font-family="Geist, sans-serif" font-size="28" font-weight="600" fill="white">$49</text>
+          <text x="226" y="172" font-family="Geist, sans-serif" font-size="11" fill="rgba(255,255,255,0.7)">per seat / mo</text>
+          <line x1="226" y1="192" x2="364" y2="192" stroke="rgba(255,255,255,0.2)"/>
+          <text x="226" y="214" font-family="Geist Mono, monospace" font-size="9" fill="rgba(255,255,255,0.85)">✓ remote caching</text>
+          <text x="226" y="232" font-family="Geist Mono, monospace" font-size="9" fill="rgba(255,255,255,0.85)">✓ team analytics</text>
+          <text x="226" y="250" font-family="Geist Mono, monospace" font-size="9" fill="rgba(255,255,255,0.85)">✓ unlimited integrations</text>
+        </svg>
+      </div>
+      <div class="browser-frame" style="margin:0;">
+        <div class="mini-browser-bar"><div class="mini-dots"><span></span><span></span><span></span></div></div>
+        <svg viewBox="0 0 400 300" style="display:block;width:100%;">
+          <rect width="400" height="300" fill="#0D0D0D"/>
+          <text x="20" y="40" font-family="Geist Mono, monospace" font-size="10" fill="rgba(255,255,255,0.3)" letter-spacing="1">CHANGELOG</text>
+          <text x="20" y="70" font-family="Geist, sans-serif" font-size="18" font-weight="600" fill="white">v2.4 — Feb 2025</text>
+          <text x="20" y="92" font-family="Geist, sans-serif" font-size="12" fill="rgba(255,255,255,0.35)">Remote cache v2 + GitHub Actions native</text>
+          <line x1="20" y1="108" x2="380" y2="108" stroke="rgba(255,255,255,0.06)"/>
+          <rect x="20" y="120" width="55" height="18" rx="4" fill="#5B5BD6" opacity="0.9"/>
+          <text x="47" y="133" font-family="Geist Mono, monospace" font-size="9" fill="white" text-anchor="middle">NEW</text>
+          <text x="88" y="133" font-family="Geist Mono, monospace" font-size="10" fill="rgba(255,255,255,0.6)">Remote cache v2 — 10× faster</text>
+          <rect x="20" y="150" width="55" height="18" rx="4" fill="rgba(74,222,128,0.2)"/>
+          <text x="47" y="163" font-family="Geist Mono, monospace" font-size="9" fill="#4ADE80" text-anchor="middle">IMPROVED</text>
+          <text x="88" y="163" font-family="Geist Mono, monospace" font-size="10" fill="rgba(255,255,255,0.6)">Task graph resolution</text>
+          <rect x="20" y="180" width="55" height="18" rx="4" fill="rgba(255,255,255,0.08)"/>
+          <text x="47" y="193" font-family="Geist Mono, monospace" font-size="9" fill="rgba(255,255,255,0.5)" text-anchor="middle">FIX</text>
+          <text x="88" y="193" font-family="Geist Mono, monospace" font-size="10" fill="rgba(255,255,255,0.6)">Windows path normalization</text>
+          <text x="20" y="240" font-family="Geist, sans-serif" font-size="16" font-weight="600" fill="rgba(255,255,255,0.7)">v2.3 — Dec 2024</text>
+          <text x="20" y="262" font-family="Geist, sans-serif" font-size="12" fill="rgba(255,255,255,0.25)">Monorepo workspaces + watch mode</text>
+        </svg>
+      </div>
+      <div class="browser-frame" style="margin:0;">
+        <div class="mini-browser-bar"><div class="mini-dots"><span></span><span></span><span></span></div></div>
+        <svg viewBox="0 0 400 300" style="display:block;width:100%;">
+          <rect width="400" height="300" fill="#0D0D0D"/>
+          <text x="20" y="40" font-family="Geist Mono, monospace" font-size="10" fill="rgba(255,255,255,0.3)" letter-spacing="1">DOCS / QUICKSTART</text>
+          <!-- Left sidebar -->
+          <rect x="0" y="56" width="110" height="244" fill="#111111"/>
+          <text x="16" y="80" font-family="Geist Mono, monospace" font-size="9" fill="rgba(255,255,255,0.3)" letter-spacing="0.5">GETTING STARTED</text>
+          <text x="16" y="100" font-family="Geist, sans-serif" font-size="11" fill="#5B5BD6">Installation</text>
+          <text x="16" y="118" font-family="Geist, sans-serif" font-size="11" fill="rgba(255,255,255,0.4)">Configuration</text>
+          <text x="16" y="136" font-family="Geist, sans-serif" font-size="11" fill="rgba(255,255,255,0.4)">Your first pipeline</text>
+          <text x="16" y="162" font-family="Geist Mono, monospace" font-size="9" fill="rgba(255,255,255,0.3)" letter-spacing="0.5">CORE CONCEPTS</text>
+          <text x="16" y="180" font-family="Geist, sans-serif" font-size="11" fill="rgba(255,255,255,0.4)">Tasks</text>
+          <text x="16" y="198" font-family="Geist, sans-serif" font-size="11" fill="rgba(255,255,255,0.4)">Caching</text>
+          <text x="16" y="216" font-family="Geist, sans-serif" font-size="11" fill="rgba(255,255,255,0.4)">Remote runs</text>
+          <!-- Content -->
+          <text x="126" y="80" font-family="Geist, sans-serif" font-size="15" font-weight="600" fill="white">Installation</text>
+          <rect x="126" y="96" width="258" height="56" rx="6" fill="#1A1A1A"/>
+          <text x="140" y="118" font-family="Geist Mono, monospace" font-size="11" fill="rgba(255,255,255,0.35)">$ npm install -g @parallel/cli</text>
+          <text x="140" y="138" font-family="Geist Mono, monospace" font-size="11" fill="#4ADE80">✓ parallel 2.4.1 installed</text>
+          <text x="126" y="174" font-family="Geist, sans-serif" font-size="12" fill="rgba(255,255,255,0.5)">Then initialise your repo:</text>
+          <rect x="126" y="185" width="258" height="36" rx="6" fill="#1A1A1A"/>
+          <text x="140" y="208" font-family="Geist Mono, monospace" font-size="11" fill="rgba(255,255,255,0.35)">$ parallel init</text>
+        </svg>
+      </div>
+    </div>
+  </div>
+
+  <!-- Quote -->
+  <div class="container rv">
+    <div class="quote-block">
+      <blockquote>"The old site was invisible. Eight weeks after launch, we were getting sign-up requests from engineers at companies we'd been trying to reach for two years. <em>The site became our best salesperson.</em>"</blockquote>
+      <div class="q-by">Tom Wren · Co-founder, Parallel</div>
+    </div>
+  </div>
+
+  <!-- Process -->
+  <section class="container case-section">
+    <div class="case-two-col">
+      <div>
+        <div class="page-eyebrow rv" style="margin-bottom:20px;">Process</div>
+        <div class="case-body rv">
+          <h2>Developer empathy, encoded into every decision.</h2>
+          <p>The design process started with research, not Figma. We needed to understand why developers trusted the product before we could design a site that conveyed that trust to new visitors.</p>
+          <p>Every design decision was pressure-tested against a single question: would a senior engineer at a company like Vercel find this credible?</p>
+        </div>
+      </div>
+      <div class="rv">
+        <div class="process-v">
+          <div class="pv-step">
+            <div class="pv-tag">Week 1</div>
+            <div class="pv-name">User research</div>
+            <div class="pv-desc">12 interviews with power users. Identified trust signals: benchmarks, real CLI output, GitHub star counts, uptime data. Identified red flags: marketing adjectives, stock photography, vague promises.</div>
+          </div>
+          <div class="pv-step">
+            <div class="pv-tag">Weeks 2–3</div>
+            <div class="pv-name">Information architecture</div>
+            <div class="pv-desc">Restructured the site around the developer journey: problem awareness → curiosity → installation → activation. Each page has a single job in that funnel.</div>
+          </div>
+          <div class="pv-step">
+            <div class="pv-tag">Weeks 3–5</div>
+            <div class="pv-name">Design system + build</div>
+            <div class="pv-desc">Dark terminal aesthetic with Geist Mono for code and data. Purple accent (#5B5BD6) for interactive elements. Complete component library — nav, code blocks, benchmark tables, pricing, changelog. Next.js 14 + MDX docs.</div>
+          </div>
+          <div class="pv-step">
+            <div class="pv-tag">Weeks 6–8</div>
+            <div class="pv-name">Docs redesign + launch</div>
+            <div class="pv-desc">Full documentation redesign with search, versioned pages, and a community changelog system. Launched to 12,000 existing users with zero downtime migration.</div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="deliverables-list rv">
+      <span>User research</span><span>Information architecture</span><span>Design system</span><span>8 pages</span><span>Next.js 14</span><span>MDX docs</span><span>Changelog system</span><span>Analytics</span><span>98 Lighthouse</span>
+    </div>
+  </section>
+
+  <!-- Results -->
+  <section class="container case-section">
+    <div class="page-eyebrow rv" style="margin-bottom:20px;">Results · 8 weeks post-launch</div>
+    <h2 class="h-1 rv" style="max-width:20ch;">The site became the top acquisition channel.</h2>
+    <div class="case-results rv">
+      <div class="result-cell"><div class="r-n">+2.4×</div><div class="r-l">Signup rate</div></div>
+      <div class="result-cell"><div class="r-n">98</div><div class="r-l">Lighthouse avg.</div></div>
+      <div class="result-cell"><div class="r-n">-62%</div><div class="r-l">Bounce on docs</div></div>
+      <div class="result-cell"><div class="r-n">8wk</div><div class="r-l">Brief to live</div></div>
+    </div>
+  </section>
+
+  <section class="container case-section">
+    <div class="page-eyebrow rv" style="margin-bottom:20px;">More work</div>
+    <div class="next-case">
+      <a href="case-northwind.html" class="next-card rv">
+        <div class="nc-tag">SaaS · DevOps · 2025</div>
+        <div class="nc-title"><span>Northwind — Series B launch.</span><span>↗</span></div>
+      </a>
+      <a href="case-quanta.html" class="next-card rv">
+        <div class="nc-tag">AI Infra · Web · 2025</div>
+        <div class="nc-title"><span>Quanta Labs — $22M Series A raised.</span><span>↗</span></div>
+      </a>
+    </div>
+  </section>
+
+</main>
+<div id="footer-mount"></div>
+<script src="page-chrome.js"></script>
+</body>
+</html>

@@ -1,0 +1,158 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>Mercato — AceCloud Case Study</title>
+<meta name="description" content="How AceCloud redesigned Mercato's marketplace platform, improving checkout completion by 41% and cutting support tickets in half."/>
+<link rel="preconnect" href="https://fonts.googleapis.com"/>
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
+<link href="https://fonts.googleapis.com/css2?family=Geist:wght@300;400;500;600&family=Geist+Mono:wght@400;500&family=Instrument+Serif:ital@0;1&display=swap" rel="stylesheet"/>
+<link rel="stylesheet" href="styles.css"/>
+<link rel="stylesheet" href="styles-v2.css"/>
+<link rel="stylesheet" href="styles-pages.css"/>
+<link rel="stylesheet" href="styles-cases.css"/>
+<style>
+.serif-italic{font-family:"Instrument Serif",serif!important;font-style:italic;font-weight:400}
+.case-visual { width: 100%; border-radius: var(--r-lg); overflow: hidden; border: 1px solid var(--line); margin: clamp(40px,7vh,80px) 0; }
+.case-visual svg { display: block; width: 100%; }
+.case-body { max-width: 72ch; }
+.case-body h2 { font-family: var(--display); font-weight: 500; font-size: clamp(28px,3vw,44px); letter-spacing: -0.03em; margin: 0 0 20px; }
+.case-body p { font-size: clamp(16px,1.3vw,19px); line-height: 1.65; color: var(--ink-2); margin: 0 0 24px; }
+.case-section { padding: clamp(64px,10vh,120px) 0; border-top: 1px solid var(--line); }
+.case-two-col { display: grid; grid-template-columns: 1fr 1fr; gap: clamp(40px,6vw,100px); align-items: start; }
+.case-results { display: grid; grid-template-columns: repeat(4,1fr); gap: 1px; background: var(--line); border: 1px solid var(--line); border-radius: var(--r-md); overflow: hidden; margin-top: clamp(40px,6vh,64px); }
+.result-cell { background: var(--bg); padding: clamp(24px,4vw,40px); }
+.result-cell .r-n { font-family: var(--display); font-weight: 400; font-size: clamp(36px,4.5vw,72px); letter-spacing: -0.04em; line-height: 1; margin-bottom: 10px; }
+.result-cell .r-l { font-family: var(--mono); font-size: 11px; text-transform: uppercase; letter-spacing: 0.08em; color: var(--mid-1); }
+.quote-block { background: var(--ink); color: var(--paper); border-radius: var(--r-lg); padding: clamp(40px,6vh,80px); margin: clamp(48px,8vh,96px) 0; }
+.quote-block blockquote { font-family: var(--display); font-weight: 400; font-size: clamp(22px,2.5vw,38px); line-height: 1.3; letter-spacing: -0.025em; margin: 0 0 28px; }
+.quote-block blockquote em { font-family: "Instrument Serif",serif; font-style: italic; color: rgba(250,250,247,0.6); }
+.quote-block .q-by { font-family: var(--mono); font-size: 11px; text-transform: uppercase; letter-spacing: 0.08em; color: rgba(250,250,247,0.55); }
+.deliverables-list { display: flex; flex-wrap: wrap; gap: 10px; margin-top: 28px; }
+.deliverables-list span { font-family: var(--mono); font-size: 11px; text-transform: uppercase; letter-spacing: 0.06em; padding: 7px 14px; border: 1px solid var(--line); border-radius: var(--r-pill); color: var(--mid-1); background: var(--paper); }
+.next-case { display: grid; grid-template-columns: 1fr 1fr; gap: 24px; margin-top: clamp(48px,7vh,80px); }
+.next-card { border: 1px solid var(--line); border-radius: var(--r-md); padding: 32px; text-decoration: none; color: var(--ink); transition: transform 0.4s cubic-bezier(0.34,1.56,0.64,1), box-shadow 0.3s; display: block; }
+.next-card:hover { transform: translateY(-4px); box-shadow: 0 12px 40px rgba(10,10,10,0.08); }
+.next-card .nc-tag { font-family: var(--mono); font-size: 10.5px; text-transform: uppercase; letter-spacing: 0.08em; color: var(--mid-1); margin-bottom: 14px; }
+.next-card .nc-title { font-family: var(--display); font-weight: 500; font-size: clamp(20px,2vw,30px); letter-spacing: -0.025em; display: flex; justify-content: space-between; align-items: baseline; }
+@media (max-width:768px) { .case-two-col,.case-results,.next-case { grid-template-columns: 1fr; } }
+</style>
+</head>
+<body>
+<script>window.PAGE_ACTIVE="portfolio";</script>
+<div id="nav-mount"></div>
+<main class="shell shell-v2">
+
+  <section class="container page-hero">
+    <h1 class="page-title rv">Redesigning a marketplace from the <em>checkout back</em>.</h1>
+    <p class="page-lede rv">Mercato connects independent grocers with local shoppers. The product worked. The UX didn't — customers were dropping out at checkout, and support was overwhelmed with questions the interface should have answered. We redesigned the purchase flow and merchant dashboard from first principles, and the numbers moved fast.</p>
+    <div class="page-meta">
+      <div class="rv"><div class="l">Client</div><div class="v">Mercato</div></div>
+      <div class="rv"><div class="l">Scope</div><div class="v">Product design</div></div>
+      <div class="rv"><div class="l">Timeline</div><div class="v">12 weeks</div></div>
+      <div class="rv"><div class="l">Result</div><div class="v">+41% checkout</div></div>
+    </div>
+  </section>
+
+  <div class="container">
+    <div class="case-visual rv" style="aspect-ratio:16/9;background:#F8FAF8;">
+      <svg viewBox="0 0 1200 675" preserveAspectRatio="xMidYMid slice" style="width:100%;height:100%;display:block;">
+        <rect width="1200" height="675" fill="#F8FAF8"/>
+        <!-- Browser chrome mockup -->
+        <rect x="80" y="60" width="680" height="540" rx="8" fill="white" stroke="#E8EAE8" stroke-width="1"/>
+        <rect x="80" y="60" width="680" height="40" rx="8" fill="#F2F4F2"/>
+        <rect x="80" y="88" width="680" height="12" fill="#F2F4F2"/>
+        <circle cx="108" cy="80" r="6" fill="#FF6B6B" opacity="0.6"/>
+        <circle cx="128" cy="80" r="6" fill="#FFD93D" opacity="0.6"/>
+        <circle cx="148" cy="80" r="6" fill="#6BCB77" opacity="0.6"/>
+        <!-- Product card area -->
+        <text x="110" y="140" font-family="Geist Mono, monospace" font-size="10" fill="#8A9A8A" letter-spacing="1">CHECKOUT · 3 STEPS</text>
+        <rect x="110" y="155" width="300" height="200" rx="6" fill="#F8FAF8" stroke="#E8EAE8" stroke-width="1"/>
+        <text x="130" y="200" font-family="Geist, sans-serif" font-size="14" font-weight="500" fill="#1A2A1A">Your cart</text>
+        <text x="130" y="230" font-family="Geist, sans-serif" font-size="12" fill="#5A6A5A">Organic sourdough · $8.00</text>
+        <text x="130" y="252" font-family="Geist, sans-serif" font-size="12" fill="#5A6A5A">Heirloom tomatoes · $6.50</text>
+        <text x="130" y="274" font-family="Geist, sans-serif" font-size="12" fill="#5A6A5A">Aged cheddar · $12.00</text>
+        <line x1="130" y1="302" x2="390" y2="302" stroke="#E8EAE8"/>
+        <text x="130" y="326" font-family="Geist, sans-serif" font-size="14" font-weight="500" fill="#1A2A1A">Total</text>
+        <text x="340" y="326" font-family="Geist, sans-serif" font-size="14" font-weight="500" fill="#1A2A1A" text-anchor="end">$26.50</text>
+        <rect x="430" y="155" width="300" height="200" rx="6" fill="#1A2A1A"/>
+        <text x="450" y="205" font-family="Geist, sans-serif" font-size="13" font-weight="500" fill="white">Delivery window</text>
+        <text x="450" y="230" font-family="Geist Mono, monospace" font-size="11" fill="rgba(255,255,255,0.6)">Today · 2pm – 4pm</text>
+        <text x="450" y="255" font-family="Geist Mono, monospace" font-size="11" fill="rgba(255,255,255,0.6)">Today · 4pm – 6pm</text>
+        <rect x="450" y="270" width="200" height="30" rx="4" fill="white" opacity="0.1"/>
+        <text x="460" y="290" font-family="Geist Mono, monospace" font-size="11" fill="rgba(255,255,255,0.8)">Tomorrow · 10am – 12pm</text>
+        <rect x="110" y="380" width="620" height="44" rx="22" fill="#1A2A1A"/>
+        <text x="420" y="408" font-family="Geist, sans-serif" font-size="14" font-weight="500" fill="white" text-anchor="middle">Place order · $26.50</text>
+        <!-- Right side metrics -->
+        <text x="840" y="160" font-family="Geist Mono, monospace" font-size="11" fill="#8A9A8A" letter-spacing="1.5">CHECKOUT COMPLETION</text>
+        <text x="840" y="230" font-family="Geist, sans-serif" font-size="64" font-weight="500" fill="#1A2A1A" letter-spacing="-2">+41%</text>
+        <text x="840" y="265" font-family="Geist, sans-serif" font-size="14" fill="#8A9A8A">Before: 34% → After: 48%</text>
+        <line x1="840" y1="300" x2="1120" y2="300" stroke="#E8EAE8"/>
+        <text x="840" y="360" font-family="Geist Mono, monospace" font-size="11" fill="#8A9A8A" letter-spacing="1.5">SUPPORT TICKETS</text>
+        <text x="840" y="420" font-family="Geist, sans-serif" font-size="64" font-weight="500" fill="#1A2A1A" letter-spacing="-2">−52%</text>
+        <text x="840" y="455" font-family="Geist, sans-serif" font-size="14" fill="#8A9A8A">Week 4 post-launch</text>
+      </svg>
+    </div>
+  </div>
+
+  <section class="container case-section">
+    <div class="case-two-col">
+      <div>
+        <div class="page-eyebrow rv" style="margin-bottom:20px;">The challenge</div>
+        <div class="case-body rv">
+          <p>Mercato had strong PMF — independent grocer inventory, same-day delivery, genuinely better produce than supermarkets. But their checkout abandoned 66% of users. Session recordings showed the same patterns: confusion around delivery windows, ambiguity about substitution preferences, and a payment step that felt insecure even though it wasn't.</p>
+          <p>The merchant dashboard had a parallel problem. Grocers were calling support to ask questions that the dashboard answered poorly — inventory sync issues, order status ambiguity, payout timing. Support tickets were growing faster than the business.</p>
+        </div>
+      </div>
+      <div>
+        <div class="page-eyebrow rv" style="margin-bottom:20px;">Our approach</div>
+        <div class="case-body rv">
+          <p>We started by spending a week with the support team, cataloguing the 40 most common questions. Every support ticket is a design failure. The list became the product backlog.</p>
+          <p>The checkout redesign focused on three things: progressive disclosure (show delivery options only after the cart is confirmed), explicit substitution preference (ask once, remember always), and a payment step that felt like it belonged to a trusted brand. We ran two rounds of unmoderated user testing before writing a line of production code.</p>
+          <p>The merchant dashboard was redesigned around daily job flows — opening inventory, processing orders, reconciling payouts. Every screen has one primary action and a clear next step.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <div class="container rv">
+    <div class="quote-block">
+      <blockquote>"Support volume was our scaling bottleneck. AceCloud identified the exact UX gaps causing it, fixed them, and <em>our support team went from reactive to proactive</em> in a month."</blockquote>
+      <div class="q-by">Tom Reyes · Head of Product, Mercato</div>
+    </div>
+  </div>
+
+  <section class="container case-section">
+    <div class="page-eyebrow rv" style="margin-bottom:20px;">Results · Eight weeks post-launch</div>
+    <h2 class="h-1 rv" style="max-width:20ch;">Better UX is a growth strategy.</h2>
+    <div class="case-results rv">
+      <div class="result-cell"><div class="r-n">+41%</div><div class="r-l">Checkout completion</div></div>
+      <div class="result-cell"><div class="r-n">−52%</div><div class="r-l">Support tickets</div></div>
+      <div class="result-cell"><div class="r-n">+28%</div><div class="r-l">Merchant daily active</div></div>
+      <div class="result-cell"><div class="r-n">12wk</div><div class="r-l">Research to shipped</div></div>
+    </div>
+    <div class="deliverables-list rv">
+      <span>UX research</span><span>Session recording analysis</span><span>Checkout redesign</span><span>Merchant dashboard</span><span>Component library</span><span>Usability testing</span><span>React build</span><span>Analytics</span>
+    </div>
+  </section>
+
+  <section class="container case-section">
+    <div class="page-eyebrow rv" style="margin-bottom:20px;">More work</div>
+    <div class="next-case">
+      <a href="case-northwind.html" class="next-card rv">
+        <div class="nc-tag">SaaS · DevOps · 2025</div>
+        <div class="nc-title"><span>Northwind — Series B launch.</span><span>↗</span></div>
+      </a>
+      <a href="case-fieldnotes.html" class="next-card rv">
+        <div class="nc-tag">Brand · Commerce · 2025</div>
+        <div class="nc-title"><span>Fieldnotes — 3× revenue growth.</span><span>↗</span></div>
+      </a>
+    </div>
+  </section>
+
+</main>
+<div id="footer-mount"></div>
+<script src="page-chrome.js"></script>
+</body>
+</html>

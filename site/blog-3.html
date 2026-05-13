@@ -1,0 +1,61 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>The design system is the deliverable — AceCloud Journal</title>
+<link rel="preconnect" href="https://fonts.googleapis.com"/>
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
+<link href="https://fonts.googleapis.com/css2?family=Geist:wght@300;400;500;600&family=Geist+Mono:wght@400;500&family=Instrument+Serif:ital@0;1&display=swap" rel="stylesheet"/>
+<link rel="stylesheet" href="styles.css"/>
+<link rel="stylesheet" href="styles-v2.css"/>
+<link rel="stylesheet" href="styles-pages.css"/>
+<link rel="stylesheet" href="blog-article.css"/>
+</head>
+<body>
+<script>window.PAGE_ACTIVE="blog";</script>
+<div id="nav-mount"></div>
+
+<main class="shell shell-v2">
+  <article class="article">
+    <div class="container">
+      <div class="a-meta"><span>Apr 04 · 2026</span><span class="dot"></span><span>Essay · 10 min</span><span class="dot"></span><span>Maya Shah</span></div>
+      <h1>The design system is the <em>deliverable</em>. Not the website.</h1>
+      <p class="lede">If you hand back a Figma library that breaks the moment your in-house team extends it, you didn't ship a system. You shipped a screenshot of one.</p>
+
+      <div class="body">
+        <p>We've inherited a lot of agency design systems over the years. Roughly nine out of ten of them fall apart the first time an in-house designer tries to extend them. The components are stamped onto pages instead of composed from primitives. The tokens are hardcoded hex values, not semantic references. The typography "system" is six bespoke Text styles per page, none of them sharing a scale. The documentation says "do not change brand colours" and then ships seventeen one-off accent colours used once each.</p>
+
+        <p>That's not a design system. That's a Figma file with the word "system" in the title.</p>
+
+        <h2>What a real system gives you.</h2>
+        <p>A real design system is a layered abstraction. Tokens at the bottom — primitive values like <code>brand-50</code> through <code>brand-900</code>, a 4px spacing scale, a type scale with five sizes. Semantic aliases on top — <code>surface-primary</code>, <code>text-muted</code>, <code>border-strong</code>. Components composed from semantic aliases, not from primitives.</p>
+
+        <p>When that's done right, your in-house team can theme the entire site for a holiday campaign by changing four token values. They can extend the system with a new component that automatically inherits density, theme and motion. They can swap fonts without breaking layout. The system absorbs change instead of fracturing.</p>
+
+        <blockquote>If a designer at your company can ship a new page on Monday without asking us, the system is doing its job.</blockquote>
+
+        <h2>Figma is half of it. The other half is code.</h2>
+        <p>A design system that lives only in Figma is a half-system. We mirror every Figma component to a coded component, one-to-one. Variants in Figma correspond to props in code. Tokens are exported from Figma and consumed by the engineering team via a single JSON file. We use Style Dictionary; you could use anything, but you need <em>something</em> automated. Otherwise the design library and the production code drift by week three.</p>
+
+        <h2>Documentation is a deliverable.</h2>
+        <p>The most under-loved part of any system. We write a usage doc for every component — when to use it, when not to, the three most common misuse patterns, and what to use instead. We ship it as a Storybook MDX site. Six months after launch, when the new designer joins, they read the docs and they're up to speed in a day.</p>
+
+        <h2>The compounding effect.</h2>
+        <p>The reason a real design system is the deliverable is that everything downstream of it compounds. Marketing landing pages ship faster. Campaign microsites stay on-brand. Product surfaces feel like the marketing site. Engineering reuses primitives instead of one-offing. The brand survives staff turnover. Eighteen months in, the system is worth more than the original site launch.</p>
+
+        <p>This is why we sell systems, not sites. The site is the proof. The system is the leverage.</p>
+      </div>
+
+      <div class="signoff">
+        <a href="blog.html">← Back to journal</a>
+        <span>MS / 04.2026</span>
+      </div>
+    </div>
+  </article>
+</main>
+
+<div id="footer-mount"></div>
+<script src="page-chrome.js"></script>
+</body>
+</html>

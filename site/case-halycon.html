@@ -1,0 +1,159 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>Halycon Capital — AceCloud Case Study</title>
+<meta name="description" content="How AceCloud re-platformed a fund's public face in eight weeks and delivered 84% increase in pipeline growth ahead of a major raise."/>
+<link rel="preconnect" href="https://fonts.googleapis.com"/>
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
+<link href="https://fonts.googleapis.com/css2?family=Geist:wght@300;400;500;600&family=Geist+Mono:wght@400;500&family=Instrument+Serif:ital@0;1&display=swap" rel="stylesheet"/>
+<link rel="stylesheet" href="styles.css"/>
+<link rel="stylesheet" href="styles-v2.css"/>
+<link rel="stylesheet" href="styles-pages.css"/>
+<link rel="stylesheet" href="styles-cases.css"/>
+<style>
+.serif-italic{font-family:"Instrument Serif",serif!important;font-style:italic;font-weight:400}
+.case-visual { width: 100%; border-radius: var(--r-lg); overflow: hidden; border: 1px solid var(--line); margin: clamp(40px,7vh,80px) 0; background: linear-gradient(160deg, #14141A 0%, #1F1F2A 100%); }
+.case-visual svg { display: block; width: 100%; }
+.case-body { max-width: 72ch; }
+.case-body h2 { font-family: var(--display); font-weight: 500; font-size: clamp(28px,3vw,44px); letter-spacing: -0.03em; margin: 0 0 20px; }
+.case-body p { font-size: clamp(16px,1.3vw,19px); line-height: 1.65; color: var(--ink-2); margin: 0 0 24px; }
+.case-body p:last-child { margin-bottom: 0; }
+.case-section { padding: clamp(64px,10vh,120px) 0; border-top: 1px solid var(--line); }
+.case-two-col { display: grid; grid-template-columns: 1fr 1fr; gap: clamp(40px,6vw,100px); align-items: start; }
+.case-results { display: grid; grid-template-columns: repeat(4,1fr); gap: 1px; background: var(--line); border: 1px solid var(--line); border-radius: var(--r-md); overflow: hidden; margin-top: clamp(40px,6vh,64px); }
+.result-cell { background: var(--bg); padding: clamp(24px,4vw,40px); }
+.result-cell .r-n { font-family: var(--display); font-weight: 400; font-size: clamp(36px,4.5vw,72px); letter-spacing: -0.04em; line-height: 1; margin-bottom: 10px; }
+.result-cell .r-l { font-family: var(--mono); font-size: 11px; text-transform: uppercase; letter-spacing: 0.08em; color: var(--mid-1); }
+.quote-block { background: var(--ink); color: var(--paper); border-radius: var(--r-lg); padding: clamp(40px,6vh,80px); margin: clamp(48px,8vh,96px) 0; }
+.quote-block blockquote { font-family: var(--display); font-weight: 400; font-size: clamp(22px,2.5vw,38px); line-height: 1.3; letter-spacing: -0.025em; margin: 0 0 28px; }
+.quote-block blockquote em { font-family: "Instrument Serif",serif; font-style: italic; color: rgba(250,250,247,0.6); }
+.quote-block .q-by { font-family: var(--mono); font-size: 11px; text-transform: uppercase; letter-spacing: 0.08em; color: rgba(250,250,247,0.55); }
+.deliverables-list { display: flex; flex-wrap: wrap; gap: 10px; margin-top: 28px; }
+.deliverables-list span { font-family: var(--mono); font-size: 11px; text-transform: uppercase; letter-spacing: 0.06em; padding: 7px 14px; border: 1px solid var(--line); border-radius: var(--r-pill); color: var(--mid-1); background: var(--paper); }
+.next-case { display: grid; grid-template-columns: 1fr 1fr; gap: 24px; margin-top: clamp(48px,7vh,80px); }
+.next-card { border: 1px solid var(--line); border-radius: var(--r-md); padding: 32px; text-decoration: none; color: var(--ink); transition: transform 0.4s cubic-bezier(0.34,1.56,0.64,1), box-shadow 0.3s; display: block; }
+.next-card:hover { transform: translateY(-4px); box-shadow: 0 12px 40px rgba(10,10,10,0.08); }
+.next-card .nc-tag { font-family: var(--mono); font-size: 10.5px; text-transform: uppercase; letter-spacing: 0.08em; color: var(--mid-1); margin-bottom: 14px; }
+.next-card .nc-title { font-family: var(--display); font-weight: 500; font-size: clamp(20px,2vw,30px); letter-spacing: -0.025em; display: flex; justify-content: space-between; align-items: baseline; }
+@media (max-width:768px) { .case-two-col,.case-results,.next-case { grid-template-columns: 1fr; } .result-cell { padding: 24px; } }
+</style>
+</head>
+<body>
+<script>window.PAGE_ACTIVE="portfolio";</script>
+<div id="nav-mount"></div>
+<main class="shell shell-v2">
+
+  <!-- Hero -->
+  <section class="container page-hero">
+    <h1 class="page-title rv">Re-platforming a fund's public face.</h1>
+    <p class="page-lede rv">Halycon Capital needed a website that reflected the quality of capital they deploy — not another financial services template with a stock photo of a handshake. We repositioned the brand, redesigned the site and shipped it eight weeks before their largest-ever fund close.</p>
+    <div class="page-meta">
+      <div class="rv"><div class="l">Client</div><div class="v">Halycon Capital</div></div>
+      <div class="rv"><div class="l">Scope</div><div class="v">Brand + Site</div></div>
+      <div class="rv"><div class="l">Timeline</div><div class="v">8 weeks</div></div>
+      <div class="rv"><div class="l">Result</div><div class="v">84% increase in pipeline</div></div>
+    </div>
+  </section>
+
+  <!-- Visual -->
+  <div class="container">
+    <div class="case-visual rv" style="aspect-ratio:16/9;">
+      <svg viewBox="0 0 1200 675" preserveAspectRatio="xMidYMid slice" style="width:100%;height:100%;display:block;">
+        <rect width="1200" height="675" fill="#14141A"/>
+        <text x="80" y="200" font-family="Geist, sans-serif" font-size="44" font-weight="500" fill="rgba(255,255,255,0.5)" letter-spacing="-0.5">Halycon Capital</text>
+        <text x="80" y="380" font-family="Instrument Serif, serif" font-size="160" font-style="italic" fill="white" letter-spacing="-5">Patient capital.</text>
+        <text x="80" y="520" font-family="Geist, sans-serif" font-size="120" font-weight="500" fill="white" letter-spacing="-4">Built to last.</text>
+        <text x="80" y="620" font-family="Geist Mono, monospace" font-size="13" fill="rgba(255,255,255,0.45)" letter-spacing="2">EST. 1998 · NEW YORK / LONDON</text>
+        <text x="900" y="200" font-family="Geist Mono, monospace" font-size="11" fill="rgba(255,255,255,0.45)" letter-spacing="1.5">FUND VII · 2026</text>
+        <text x="900" y="260" font-family="Geist, sans-serif" font-size="52" font-weight="500" fill="white" letter-spacing="-2">$1.2B</text>
+        <text x="900" y="295" font-family="Geist, sans-serif" font-size="14" fill="rgba(255,255,255,0.55)">Targeted close · Q4</text>
+        <line x1="80" y1="640" x2="1120" y2="640" stroke="rgba(255,255,255,0.1)"/>
+      </svg>
+    </div>
+  </div>
+
+  <!-- Challenge -->
+  <section class="container case-section">
+    <div class="case-two-col">
+      <div>
+        <div class="page-eyebrow rv" style="margin-bottom:20px;">The challenge</div>
+        <div class="case-body rv">
+          <p>Halycon Capital had been operating for 26 years but their website looked like it was built in 2014. The design communicated "regional PE shop" when the reality was a $4B+ fund with a category-defining thesis on infrastructure capital.</p>
+          <p>They were six months from the biggest fundraise in their history. LPs were landing on a site that undercut every in-person conversation. The brief: make the site worthy of the conversation, without losing the gravitas that 26 years earns you.</p>
+        </div>
+      </div>
+      <div>
+        <div class="page-eyebrow rv" style="margin-bottom:20px;">What we did</div>
+        <div class="case-body rv">
+          <p>We started with a positioning workshop with the founding partners. The key insight: Halycon's differentiation wasn't returns — it was patience. A 10-year hold horizon is genuinely rare in PE. The new positioning: "patient infrastructure capital."</p>
+          <p>From that brief we designed a site that felt like a Bloomberg terminal crossed with a serious print publication — dark, editorial, credible. The typography system uses a mix of display Geist and editorial Instrument Serif for emphasis. Every section has a clear job in the LP conversion funnel.</p>
+          <p>Built on Next.js with Sanity CMS in eight weeks, including brand system, copy and development.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Quote -->
+  <div class="container rv">
+    <div class="quote-block">
+      <blockquote>"They re-platformed our public face in eight weeks and we closed the largest fund in our history the same quarter. AceCloud doesn't ship websites. <em>They ship leverage.</em>"</blockquote>
+      <div class="q-by">Priya Mehta · VP Marketing, Halycon Capital</div>
+    </div>
+  </div>
+
+  <!-- Results -->
+  <section class="container case-section">
+    <div class="page-eyebrow rv" style="margin-bottom:20px;">Results</div>
+    <h2 class="h-1 rv" style="max-width:16ch;">Numbers that moved within the first quarter.</h2>
+    <div class="case-results rv">
+      <div class="result-cell"><div class="r-n">+84%</div><div class="r-l">Pipeline growth Q3 2025</div></div>
+      <div class="result-cell"><div class="r-n">8wk</div><div class="r-l">Brand to live</div></div>
+      <div class="result-cell"><div class="r-n">97</div><div class="r-l">Lighthouse score avg.</div></div>
+      <div class="result-cell"><div class="r-n">$1.2B</div><div class="r-l">Fund VII raised</div></div>
+    </div>
+  </section>
+
+  <!-- Process -->
+  <section class="container case-section">
+    <div class="case-two-col">
+      <div>
+        <div class="page-eyebrow rv" style="margin-bottom:20px;">The process</div>
+        <div class="case-body rv">
+          <h2>Eight weeks, four clear phases.</h2>
+          <p>We compressed a typical 16-week brand and site project into eight weeks by running brand and design simultaneously after the positioning brief was locked. The critical dependency was the written positioning brief — once that was approved, everything else was parallel work.</p>
+        </div>
+      </div>
+      <div class="rv">
+        <div class="cap-block" style="margin-bottom:24px;"><h4>Week 1–2 · Positioning</h4><p>Stakeholder interviews with four founding partners. Competitor teardown of 12 comparable funds. Written positioning brief: "Patient infrastructure capital for operators building the next decade of industrial technology."</p></div>
+        <div class="cap-block" style="margin-bottom:24px;"><h4>Week 2–4 · Brand + Design</h4><p>Visual identity: dark editorial direction with Instrument Serif for editorial emphasis and Geist for data and navigation. Site architecture: 7 pages, all designed simultaneously. Copy written by our team with partner review.</p></div>
+        <div class="cap-block" style="margin-bottom:24px;"><h4>Week 4–7 · Build</h4><p>Next.js 14, Sanity CMS with a custom block builder for the team's editorial needs. Cloudflare deployment. 97 Lighthouse average.</p></div>
+        <div class="cap-block"><h4>Week 7–8 · Launch</h4><p>QA, accessibility audit, analytics setup (GA4 + Hotjar) and a pre-launch press brief. Launched six weeks before the fund close.</p></div>
+      </div>
+    </div>
+    <div class="deliverables-list rv">
+      <span>Brand positioning</span><span>Visual identity</span><span>Type system</span><span>7 pages designed</span><span>Next.js build</span><span>Sanity CMS</span><span>Copywriting</span><span>Analytics setup</span>
+    </div>
+  </section>
+
+  <!-- Next cases -->
+  <section class="container case-section">
+    <div class="page-eyebrow rv" style="margin-bottom:20px;">More work</div>
+    <div class="next-case">
+      <a href="case-northwind.html" class="next-card rv">
+        <div class="nc-tag">SaaS · Platform · 2025</div>
+        <div class="nc-title"><span>Northwind — Series B launch.</span><span>↗</span></div>
+      </a>
+      <a href="case-atlas.html" class="next-card rv">
+        <div class="nc-tag">Growth · Industrial · 2025</div>
+        <div class="nc-title"><span>Atlas Foundry — 312% increase in organic traffic.</span><span>↗</span></div>
+      </a>
+    </div>
+  </section>
+
+</main>
+<div id="footer-mount"></div>
+<script src="page-chrome.js"></script>
+</body>
+</html>

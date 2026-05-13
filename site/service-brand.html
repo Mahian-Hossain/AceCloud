@@ -1,0 +1,167 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>Brand Systems — AceCloud</title>
+<meta name="description" content="AceCloud builds brand identities designed to operate at scale — wordmarks, type systems, motion principles and living guidelines your whole team can build on."/>
+<link rel="preconnect" href="https://fonts.googleapis.com"/>
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
+<link href="https://fonts.googleapis.com/css2?family=Geist:wght@300;400;500;600&family=Geist+Mono:wght@400;500&family=Instrument+Serif:ital@0;1&display=swap" rel="stylesheet"/>
+<link rel="stylesheet" href="styles.css"/>
+<link rel="stylesheet" href="styles-v2.css"/>
+<link rel="stylesheet" href="styles-pages.css"/>
+<style>
+.serif-italic{font-family:"Instrument Serif",serif!important;font-style:italic;font-weight:400}
+.svc-faq { padding: clamp(80px,12vh,140px) 0; border-top: 1px solid var(--line); }
+.svc-faq .container { max-width: 900px; }
+.faq-item { border-bottom: 1px solid var(--line); padding: 28px 0; }
+.faq-item h4 { font-family: var(--display); font-weight: 500; font-size: clamp(18px,1.5vw,24px); letter-spacing: -0.02em; margin: 0 0 14px; }
+.faq-item p { font-size: 15.5px; line-height: 1.6; color: var(--mid-1); margin: 0; max-width: 70ch; }
+.svc-clients { padding: clamp(60px,10vh,120px) 0; background: var(--paper); }
+.client-grid { display: grid; grid-template-columns: repeat(3,1fr); gap: 24px; margin-top: clamp(40px,6vh,64px); }
+.client-card { border: 1px solid var(--line); border-radius: var(--r-md); padding: 32px; background: var(--bg); }
+.client-card .cl-tag { font-family: var(--mono); font-size: 10.5px; text-transform: uppercase; letter-spacing: 0.08em; color: var(--mid-1); margin-bottom: 14px; }
+.client-card .cl-name { font-family: var(--display); font-weight: 500; font-size: clamp(22px,2vw,32px); letter-spacing: -0.025em; margin: 0 0 12px; }
+.client-card .cl-result { font-family: var(--mono); font-size: 11px; color: var(--accent-ink); letter-spacing: 0.06em; text-transform: uppercase; padding: 5px 12px; border: 1px solid var(--accent-ink); border-radius: var(--r-pill); display: inline-block; margin-bottom: 16px; }
+.client-card p { font-size: 14px; line-height: 1.55; color: var(--mid-1); margin: 0; }
+.svc-cta { padding: clamp(80px,12vh,140px) 0; }
+.svc-cta-inner { background: var(--ink); color: var(--paper); border-radius: var(--r-lg); padding: clamp(48px,8vh,100px) clamp(28px,5vw,80px); text-align: center; }
+.svc-cta-inner h2 { font-family: var(--display); font-weight: 500; font-size: clamp(36px,6vw,96px); letter-spacing: -0.04em; line-height: 0.95; margin: 0 0 28px; }
+.svc-cta-inner h2 em { font-family: "Instrument Serif",serif; font-style: italic; font-weight: 400; color: rgba(250,250,247,0.5); }
+.svc-cta-inner p { font-size: clamp(16px,1.3vw,20px); color: rgba(250,250,247,0.65); max-width: 52ch; margin: 0 auto 40px; line-height: 1.5; }
+.btn-light { background: var(--paper); color: var(--ink); padding: 16px 30px; border-radius: var(--r-pill); font-family: var(--display); font-weight: 500; font-size: 15px; display: inline-flex; align-items: center; gap: 10px; text-decoration: none; border: none; cursor: pointer; transition: transform 0.35s cubic-bezier(0.34,1.56,0.64,1), box-shadow 0.3s; position: relative; overflow: hidden; }
+.btn-light::after { content: ""; position: absolute; inset: 0; background: var(--accent); transform: scaleX(0); transform-origin: left center; transition: transform 0.45s cubic-bezier(0.2,0.8,0.2,1); }
+.btn-light > * { position: relative; z-index: 1; }
+.btn-light:hover { transform: translateY(-2px); box-shadow: 0 8px 28px rgba(250,250,247,0.15); }
+.btn-light:hover::after { transform: scaleX(1); }
+@media (max-width:768px) { .client-grid { grid-template-columns: 1fr; } }
+</style>
+</head>
+<body>
+<script>window.PAGE_ACTIVE="services";</script>
+<div id="nav-mount"></div>
+
+<main class="shell shell-v2">
+
+  <!-- Hero -->
+  <section class="container page-hero">
+    <div class="page-eyebrow rv"><span class="num">01</span>Service · Brand</div>
+    <h1 class="page-title rv">Brand systems that <em>operate</em> at scale.</h1>
+    <p class="page-lede rv">Most brand work looks great in a PDF and falls apart the first time your product team, sales team and social team try to use it. We build brand identities as operating systems — living documents, token-level design systems, and guidelines that actually survive contact with reality.</p>
+    <div class="page-meta">
+      <div class="rv"><div class="l">Timeline</div><div class="v">4 – 8 wks</div></div>
+      <div class="rv"><div class="l">Starting at</div><div class="v">$18K</div></div>
+      <div class="rv"><div class="l">Deliverables</div><div class="v">7 core outputs</div></div>
+      <div class="rv"><div class="l">Team</div><div class="v">2 senior leads</div></div>
+    </div>
+  </section>
+
+  <!-- What's Included -->
+  <section class="cap-section" id="included">
+    <div class="container cap-grid">
+      <div class="head rv">
+        <div class="cn">What's included</div>
+        <h3>Every surface your brand touches.</h3>
+        <p class="pitch">We don't hand off a logo and call it done. Brand systems from AceCloud include everything your team needs to build consistently — without pulling us in every time.</p>
+      </div>
+      <div class="body">
+        <div class="cap-block rv"><h4>Strategy &amp; positioning</h4><p>Before we draw anything we argue your positioning on paper. Competitor teardown, narrative interrogation, ICP mapping and a sharp written manifesto. Two weeks, no surprises. The brief becomes your north star for the next five years.</p></div>
+        <div class="cap-block rv"><h4>Visual identity</h4><p>Wordmark, monogram, type system, colour palette, iconography style and motion principles. Designed for the hardest surfaces first — dark mode, small print, embroidery — then simplified upward, not the other way around.</p></div>
+        <div class="cap-block rv"><h4>Design system &amp; tokens</h4><p>A Figma library built on design tokens (colour, spacing, radius, shadow) so your product and marketing teams pull from the same source of truth. Every component documented with do/don't pairs.</p></div>
+        <div class="cap-block rv"><h4>Brand guidelines</h4><p>Usable documentation your team actually reads: clear voice principles, photography and art direction guidance, layout grids, and a production checklist for any new surface.</p></div>
+        <div class="cap-deliv rv"><span>Positioning manifesto</span><span>Wordmark</span><span>Type system</span><span>Colour palette</span><span>Motion principles</span><span>Figma library</span><span>Brand guidelines</span></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Process -->
+  <section class="cap-section">
+    <div class="container cap-grid">
+      <div class="head rv">
+        <div class="cn">How we work</div>
+        <h3>Four weeks to a brand that holds.</h3>
+        <p class="pitch">We run brand work in tight two-week cycles with written briefs at every gate. You see the thinking before you see the design.</p>
+      </div>
+      <div class="body">
+        <div class="cap-block rv"><h4>Week 1–2 · Diagnose</h4><p>Brand audit, stakeholder interviews, competitor teardown and ICP research. Output: a written positioning brief you approve before we open Figma. This is the most important stage and most agencies skip it.</p></div>
+        <div class="cap-block rv"><h4>Week 2–4 · Design</h4><p>Identity concepts developed in three directions. Each direction is built from the brief — not picked from a mood board. We present rationale, not just work. One direction is refined to final.</p></div>
+        <div class="cap-block rv"><h4>Week 4–6 · System</h4><p>Approved identity extended into a full system — type hierarchy, spacing grid, component library, photography style and motion principles. Delivered as a Figma file with shared library access.</p></div>
+        <div class="cap-block rv"><h4>Week 6–8 · Handoff</h4><p>Live guidelines site or Notion doc. Handoff session with your team. 30-day post-launch support window so we're available when you hit your first real-world edge case.</p></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Past Clients -->
+  <section class="svc-clients">
+    <div class="container">
+      <div class="page-eyebrow rv">Past work · Brand</div>
+      <h2 class="page-title rv" style="font-size:clamp(36px,5vw,72px)">Brands we've built from the ground up.</h2>
+      <div class="client-grid">
+        <div class="client-card rv">
+          <div class="cl-tag">Identity · 2024</div>
+          <div class="cl-name">Fieldnotes</div>
+          <div class="cl-result">Full brand system</div>
+          <p>Fieldnotes came to us as a seed-stage SaaS with no visual identity beyond a domain name. We built their entire positioning, identity and design system in six weeks — including a Figma component library their five-person product team ships from daily.</p>
+        </div>
+        <div class="client-card rv">
+          <div class="cl-tag">Brand + Site · 2024</div>
+          <div class="cl-name">Lumen Bio</div>
+          <div class="cl-result">Category launch</div>
+          <p>A biotech category launch that required credibility without jargon. We built the positioning strategy, visual identity and site simultaneously — compressing a typical 16-week process into nine weeks to meet a conference deadline.</p>
+        </div>
+        <div class="client-card rv">
+          <div class="cl-tag">Rebrand · 2025</div>
+          <div class="cl-name">Halycon Capital</div>
+          <div class="cl-result">+84% pipeline growth</div>
+          <p>A fund rebrand ahead of a major raise. We repositioned them from "regional PE shop" to "patient infrastructure capital" — a distinction that attracted a different quality of LP and portfolio company. The new site launched three weeks before close.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FAQ -->
+  <section class="svc-faq">
+    <div class="container">
+      <div class="page-eyebrow rv">Questions</div>
+      <h2 class="page-title rv" style="font-size:clamp(36px,5vw,72px)">Honest answers.</h2>
+      <div class="faq-item rv">
+        <h4>We already have a logo. Do we need a full brand system?</h4>
+        <p>Depends. A logo alone doesn't give your product team, sales team and social team a consistent way to represent the company. If you're finding that every new asset looks slightly different, or that your team has to guess at colours, fonts and layouts — you need a system. We can audit what you have and extend it, or start fresh if it's beyond salvaging.</p>
+      </div>
+      <div class="faq-item rv">
+        <h4>How involved does our team need to be?</h4>
+        <p>We need two to three hours in week one for a brand workshop and stakeholder interviews. After that, feedback rounds are async and time-boxed to 48 hours. We don't run endless approval cycles. Each gate has a written brief, and we move forward once it's approved. Total time commitment for your team: roughly 8–10 hours over six weeks.</p>
+      </div>
+      <div class="faq-item rv">
+        <h4>What if we don't like the direction?</h4>
+        <p>We present three distinct directions at concept stage, each built from your approved brief. If none land, we have a revision round built into the engagement. In practice, this has never happened — because we write the brief first and get alignment before we design. The brief is the contract.</p>
+      </div>
+      <div class="faq-item rv">
+        <h4>Do you work with in-house designers?</h4>
+        <p>Yes, and we prefer it. An engaged in-house designer shortens feedback loops and produces better outcomes. We build the Figma library with shared library access and document every decision so your team can extend the system independently after handoff.</p>
+      </div>
+      <div class="faq-item rv">
+        <h4>What does $18K get us exactly?</h4>
+        <p>At the $18K entry point: positioning brief, wordmark, type system, colour palette, and a component library in Figma with brand guidelines. Larger engagements (rebrand + site) typically run $32K–$55K depending on scope. We scope every project in writing before you commit to anything.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA -->
+  <section class="svc-cta">
+    <div class="container">
+      <div class="svc-cta-inner rv">
+        <h2>Ready to build a brand that <em>compounds</em>?</h2>
+        <p>Tell us where you're at. We'll send a written point of view on your brand within 48 hours — no pitch deck, no boilerplate, no sales call required to get started.</p>
+        <a href="book.html" class="btn-light"><span>Start a brand project</span><span>↗</span></a>
+      </div>
+    </div>
+  </section>
+
+</main>
+
+<div id="footer-mount"></div>
+<script src="page-chrome.js"></script>
+</body>
+</html>

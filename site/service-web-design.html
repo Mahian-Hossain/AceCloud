@@ -1,0 +1,160 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>Web Design — AceCloud</title>
+<meta name="description" content="AceCloud designs marketing sites that earn the click, hold attention and convert. Editorial craft, information architecture and performance — all under one roof."/>
+<link rel="preconnect" href="https://fonts.googleapis.com"/>
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
+<link href="https://fonts.googleapis.com/css2?family=Geist:wght@300;400;500;600&family=Geist+Mono:wght@400;500&family=Instrument+Serif:ital@0;1&display=swap" rel="stylesheet"/>
+<link rel="stylesheet" href="styles.css"/>
+<link rel="stylesheet" href="styles-v2.css"/>
+<link rel="stylesheet" href="styles-pages.css"/>
+<style>
+.serif-italic{font-family:"Instrument Serif",serif!important;font-style:italic;font-weight:400}
+.svc-faq { padding: clamp(80px,12vh,140px) 0; border-top: 1px solid var(--line); }
+.svc-faq .container { max-width: 900px; }
+.faq-item { border-bottom: 1px solid var(--line); padding: 28px 0; }
+.faq-item h4 { font-family: var(--display); font-weight: 500; font-size: clamp(18px,1.5vw,24px); letter-spacing: -0.02em; margin: 0 0 14px; }
+.faq-item p { font-size: 15.5px; line-height: 1.6; color: var(--mid-1); margin: 0; max-width: 70ch; }
+.svc-clients { padding: clamp(60px,10vh,120px) 0; background: var(--paper); }
+.client-grid { display: grid; grid-template-columns: repeat(3,1fr); gap: 24px; margin-top: clamp(40px,6vh,64px); }
+.client-card { border: 1px solid var(--line); border-radius: var(--r-md); padding: 32px; background: var(--bg); }
+.client-card .cl-tag { font-family: var(--mono); font-size: 10.5px; text-transform: uppercase; letter-spacing: 0.08em; color: var(--mid-1); margin-bottom: 14px; }
+.client-card .cl-name { font-family: var(--display); font-weight: 500; font-size: clamp(22px,2vw,32px); letter-spacing: -0.025em; margin: 0 0 12px; }
+.client-card .cl-result { font-family: var(--mono); font-size: 11px; color: var(--accent-ink); letter-spacing: 0.06em; text-transform: uppercase; padding: 5px 12px; border: 1px solid var(--accent-ink); border-radius: var(--r-pill); display: inline-block; margin-bottom: 16px; }
+.client-card p { font-size: 14px; line-height: 1.55; color: var(--mid-1); margin: 0; }
+.svc-cta { padding: clamp(80px,12vh,140px) 0; }
+.svc-cta-inner { background: var(--ink); color: var(--paper); border-radius: var(--r-lg); padding: clamp(48px,8vh,100px) clamp(28px,5vw,80px); text-align: center; }
+.svc-cta-inner h2 { font-family: var(--display); font-weight: 500; font-size: clamp(36px,6vw,96px); letter-spacing: -0.04em; line-height: 0.95; margin: 0 0 28px; }
+.svc-cta-inner h2 em { font-family: "Instrument Serif",serif; font-style: italic; font-weight: 400; color: rgba(250,250,247,0.5); }
+.svc-cta-inner p { font-size: clamp(16px,1.3vw,20px); color: rgba(250,250,247,0.65); max-width: 52ch; margin: 0 auto 40px; line-height: 1.5; }
+.btn-light { background: var(--paper); color: var(--ink); padding: 16px 30px; border-radius: var(--r-pill); font-family: var(--display); font-weight: 500; font-size: 15px; display: inline-flex; align-items: center; gap: 10px; text-decoration: none; border: none; cursor: pointer; transition: transform 0.35s cubic-bezier(0.34,1.56,0.64,1), box-shadow 0.3s; position: relative; overflow: hidden; }
+.btn-light::after { content: ""; position: absolute; inset: 0; background: var(--accent); transform: scaleX(0); transform-origin: left center; transition: transform 0.45s cubic-bezier(0.2,0.8,0.2,1); }
+.btn-light > * { position: relative; z-index: 1; }
+.btn-light:hover { transform: translateY(-2px); box-shadow: 0 8px 28px rgba(250,250,247,0.15); }
+.btn-light:hover::after { transform: scaleX(1); }
+@media (max-width:768px) { .client-grid { grid-template-columns: 1fr; } }
+</style>
+</head>
+<body>
+<script>window.PAGE_ACTIVE="services";</script>
+<div id="nav-mount"></div>
+
+<main class="shell shell-v2">
+
+  <section class="container page-hero">
+    <div class="page-eyebrow rv"><span class="num">02</span>Service · Web Design</div>
+    <h1 class="page-title rv">Sites that win the click <em>and</em> earn the trust.</h1>
+    <p class="page-lede rv">A marketing site isn't a brochure. It's the highest-leverage sales asset you own — and most of them are designed like slide decks. We design editorial, product-grade marketing sites where every section has a job, every word is weighed, and every interaction is intentional.</p>
+    <div class="page-meta">
+      <div class="rv"><div class="l">Timeline</div><div class="v">6 – 10 wks</div></div>
+      <div class="rv"><div class="l">Starting at</div><div class="v">$24K</div></div>
+      <div class="rv"><div class="l">Deliverables</div><div class="v">Full design system</div></div>
+      <div class="rv"><div class="l">Lighthouse target</div><div class="v">95+ / page</div></div>
+    </div>
+  </section>
+
+  <section class="cap-section" id="included">
+    <div class="container cap-grid">
+      <div class="head rv">
+        <div class="cn">What's included</div>
+        <h3>Design built for the whole site, not just the homepage.</h3>
+        <p class="pitch">We design marketing sites as a single editorial property — not a homepage you love and inner pages nobody touched. Every page has an architecture, every component a purpose.</p>
+      </div>
+      <div class="body">
+        <div class="cap-block rv"><h4>Information architecture</h4><p>Before we design a pixel we map the site: user journeys, page hierarchy, narrative flow and conversion architecture. You get a site map and content brief that your team reviews before design begins. No surprises at handoff.</p></div>
+        <div class="cap-block rv"><h4>Homepage &amp; core pages</h4><p>Homepage, product/service pages, pricing, about, careers and any campaign pages in scope. Each page is designed as part of a system — components, spacing and typography are defined once and applied everywhere.</p></div>
+        <div class="cap-block rv"><h4>Design system</h4><p>A Figma file with a full component library: buttons, forms, cards, navigation states, responsive variants and dark/light mode. Tokens wired to variables so your development team has a single source of truth.</p></div>
+        <div class="cap-block rv"><h4>Copywriting</h4><p>We write the site. Headlines, body copy, CTAs and microcopy — all drafted by our team and reviewed with you. SEO-optimised from the first draft, not retrofitted. This is the piece most design agencies skip and the one that makes the biggest difference to results.</p></div>
+        <div class="cap-deliv rv"><span>IA &amp; site map</span><span>Figma design system</span><span>All core pages</span><span>Responsive variants</span><span>Dark mode</span><span>Copywriting</span><span>Dev-ready specs</span></div>
+      </div>
+    </div>
+  </section>
+
+  <section class="cap-section">
+    <div class="container cap-grid">
+      <div class="head rv">
+        <div class="cn">How we work</div>
+        <h3>Six weeks, clear gates, no surprises.</h3>
+        <p class="pitch">We run web design projects in two-week sprints with a written brief at every gate. You always know what's coming next and why.</p>
+      </div>
+      <div class="body">
+        <div class="cap-block rv"><h4>Week 1–2 · Discovery</h4><p>Stakeholder interviews, competitor audit, user journey mapping, ICP review and content inventory. Output: a written creative brief covering positioning, narrative structure, tone and a prioritised page list. You sign off before we open Figma.</p></div>
+        <div class="cap-block rv"><h4>Week 2–4 · Design</h4><p>Homepage first, then the design system, then all remaining pages. Two rounds of feedback built into the schedule. We design in Figma with shared access so you can comment in real time — no waiting for a formal review deck.</p></div>
+        <div class="cap-block rv"><h4>Week 4–6 · Polish &amp; handoff</h4><p>Motion design, micro-interactions, responsive breakpoints and accessibility review. Developer handoff package includes a component inventory, spacing specs and interaction notes. If we're also building it, this phase transitions directly to engineering.</p></div>
+        <div class="cap-block rv"><h4>Post-launch</h4><p>30-day support window after launch. We monitor analytics, fix anything that slips through QA, and make minor copy and layout adjustments as you see real-world user behaviour.</p></div>
+      </div>
+    </div>
+  </section>
+
+  <section class="svc-clients">
+    <div class="container">
+      <div class="page-eyebrow rv">Past work · Web Design</div>
+      <h2 class="page-title rv" style="font-size:clamp(36px,5vw,72px)">Sites we're proud to put our name on.</h2>
+      <div class="client-grid">
+        <div class="client-card rv">
+          <div class="cl-tag">Marketing site · 2025</div>
+          <div class="cl-name">Northwind</div>
+          <div class="cl-result">Series B launch</div>
+          <p>An OS-style marketing site for a serious DevOps platform. The brief: feel like infrastructure, not a startup. We designed a dark, typographic editorial site that earned coverage in three developer publications the week it launched.</p>
+        </div>
+        <div class="client-card rv">
+          <div class="cl-tag">Redesign · 2025</div>
+          <div class="cl-name">Mercato</div>
+          <div class="cl-result">+3.1× conversion</div>
+          <p>A D2C commerce redesign that tripled conversion rate. We restructured the site's narrative architecture, rewrote every product description and rebuilt the checkout flow before handing to our engineering team to build.</p>
+        </div>
+        <div class="client-card rv">
+          <div class="cl-tag">Platform site · 2025</div>
+          <div class="cl-name">Halycon Capital</div>
+          <div class="cl-result">+84% pipeline</div>
+          <p>A fund website redesign ahead of a major raise. We designed a site that communicated patient, category-defining capital — not another financial services template. Pipeline growth was measurable within the first quarter.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="svc-faq">
+    <div class="container">
+      <div class="page-eyebrow rv">Questions</div>
+      <h2 class="page-title rv" style="font-size:clamp(36px,5vw,72px)">What people actually ask us.</h2>
+      <div class="faq-item rv">
+        <h4>Do you design in Webflow, Framer or custom code?</h4>
+        <p>Design is always in Figma. For the build, it depends on your situation. Simple marketing sites with a content team usually benefit from Webflow or Framer. Complex, performance-critical sites go Next.js. We recommend the right tool for your needs, not the one we're most comfortable billing for.</p>
+      </div>
+      <div class="faq-item rv">
+        <h4>Can you work with our existing brand?</h4>
+        <p>Yes. We frequently design within an existing brand system. We'll audit your brand assets first and flag any issues — gaps in the system, inconsistent usage, missing components — before we start designing pages.</p>
+      </div>
+      <div class="faq-item rv">
+        <h4>We have a developer already. Can you just do design?</h4>
+        <p>Absolutely. We deliver developer-ready Figma files with full component specs, interaction notes and responsive variants. We're also happy to have a handoff call with your dev team to walk through the design decisions.</p>
+      </div>
+      <div class="faq-item rv">
+        <h4>How many revision rounds do we get?</h4>
+        <p>Two structured rounds per phase, plus an open round at final review. In practice, projects move faster than this because we write a detailed brief before we design — so revisions tend to be refinements, not redirections. We don't put a hard cap on iterations for clients we're in an ongoing retainer with.</p>
+      </div>
+      <div class="faq-item rv">
+        <h4>What's your process for mobile design?</h4>
+        <p>We design mobile and desktop simultaneously, not as an afterthought. Components are designed at their most constrained breakpoint first, then expanded to desktop. Every deliverable includes mobile, tablet and desktop variants.</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="svc-cta">
+    <div class="container">
+      <div class="svc-cta-inner rv">
+        <h2>Let's design something <em>worth visiting</em>.</h2>
+        <p>Share a link to your current site and what's not working. We'll come back with a written point of view within 48 hours — no pitch call required.</p>
+        <a href="book.html" class="btn-light"><span>Start your web design project</span><span>↗</span></a>
+      </div>
+    </div>
+  </section>
+
+</main>
+<div id="footer-mount"></div>
+<script src="page-chrome.js"></script>
+</body>
+</html>
