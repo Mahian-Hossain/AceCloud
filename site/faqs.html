@@ -1,0 +1,53 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>FAQs — AceCloud</title>
+<link rel="preconnect" href="https://fonts.googleapis.com"/>
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
+<link href="https://fonts.googleapis.com/css2?family=Geist:wght@300;400;500;600&family=Geist+Mono:wght@400;500&family=Instrument+Serif:ital@0;1&display=swap" rel="stylesheet"/>
+<link rel="stylesheet" href="styles.css"/>
+<link rel="stylesheet" href="styles-v2.css"/>
+<link rel="stylesheet" href="styles-pages.css"/>
+<link rel="stylesheet" href="styles-white.css"/>
+<link rel="stylesheet" href="styles-nav.css"/>
+<style>
+.faq-list{padding:clamp(40px,6vh,80px) 0 clamp(80px,12vh,120px);max-width:880px;margin:0 auto}
+.faq{border-top:1px solid var(--line);padding:28px 0;cursor:pointer}
+.faq:last-child{border-bottom:1px solid var(--line)}
+.faq summary{list-style:none;display:flex;justify-content:space-between;align-items:flex-start;gap:32px;font-family:var(--display);font-weight:500;font-size:clamp(20px,2vw,26px);letter-spacing:-0.02em;line-height:1.3;color:var(--ink)}
+.faq summary::-webkit-details-marker{display:none}
+.faq summary .plus{flex-shrink:0;width:32px;height:32px;border-radius:50%;border:1px solid var(--line);display:inline-flex;align-items:center;justify-content:center;font-size:18px;color:var(--ink);transition:all 0.3s}
+.faq[open] summary .plus{background:var(--ink);color:#fff;border-color:var(--ink);transform:rotate(45deg)}
+.faq .answer{font-size:17px;line-height:1.6;color:var(--mid-1);margin-top:20px;max-width:65ch}
+.faq .answer em{font-family:"Instrument Serif",serif;font-style:italic;color:var(--ink)}
+</style>
+</head>
+<body>
+<script>window.PAGE_ACTIVE="faqs";</script>
+<div id="nav-mount"></div>
+<main class="shell shell-v2">
+  <section class="container page-hero">
+    <div class="page-eyebrow rv"><span class="num">?</span>Frequently asked</div>
+    <h1 class="page-title rv">A few honest <em>answers</em>.</h1>
+    <p class="page-lede rv">The questions we get every week, answered the way we'd answer them on a call. If yours isn't here, just email.</p>
+  </section>
+
+  <section class="container faq-list">
+    <details class="faq" open><summary>What does a typical engagement cost? <span class="plus">+</span></summary><div class="answer">Most engagements land between $24K and $150K. A focused marketing-site rebuild starts around $24K. A full brand + site + growth system is typically $80K–$150K. Retainers begin at $8K / month. We'll send a written scope and price within 48 hours of your brief.</div></details>
+    <details class="faq"><summary>How long does a project take? <span class="plus">+</span></summary><div class="answer">Median engagement is <em>14 weeks</em>, end to end. Two weeks for diagnosis, four for design, four for engineering, four for launch + handover. Faster is possible for focused scopes; slower is occasionally honest for category-defining work.</div></details>
+    <details class="faq"><summary>Do you work with early-stage startups? <span class="plus">+</span></summary><div class="answer">Yes, with a caveat — we work best with companies that have product-market fit and a real budget. We're a poor fit for pre-seed teams who need a $5K logo. We're a great fit for seed-to-Series-C companies investing seriously in brand.</div></details>
+    <details class="faq"><summary>Will you sign an NDA? <span class="plus">+</span></summary><div class="answer">Always, before the first call. We carry a mutual NDA template you can sign in one click, or we'll sign yours.</div></details>
+    <details class="faq"><summary>Can you take over an existing website? <span class="plus">+</span></summary><div class="answer">Yes — website migration is a dedicated service line. We migrate from Webflow, WordPress, Framer, Squarespace and bespoke CMSes into Next.js + headless. Zero downtime, full SEO preservation.</div></details>
+    <details class="faq"><summary>Do you offer hosting? <span class="plus">+</span></summary><div class="answer">Yes. Managed Vercel / Cloudflare hosting with monitoring, backups, CMS upgrades, and on-call support. Plans start at $400 / month.</div></details>
+    <details class="faq"><summary>Who actually does the work? <span class="plus">+</span></summary><div class="answer">Partners and senior practitioners. No layered juniors, no project managers translating between disciplines. The person in your kickoff call is the person on your deliverables.</div></details>
+    <details class="faq"><summary>Do you do logo-only projects? <span class="plus">+</span></summary><div class="answer">Rarely. We work best when the brand system extends across product, marketing and growth surfaces. If you need a logo on its own, we'll happily refer you to one of three excellent independents we trust.</div></details>
+    <details class="faq"><summary>What about ongoing work after launch? <span class="plus">+</span></summary><div class="answer">Most clients continue with us on a retainer for ongoing design, engineering, SEO and paid media. Some take the keys and run it in-house — we hand back full documentation either way.</div></details>
+    <details class="faq"><summary>How do we get started? <span class="plus">+</span></summary><div class="answer">Fill out the <a href="book.html" style="color:var(--accent-ink)">brief form</a>. You'll hear from a partner within 48 hours with a written point of view, three relevant examples and a proposed call.</div></details>
+  </section>
+</main>
+<div id="footer-mount"></div>
+<script src="page-chrome.js"></script>
+</body>
+</html>

@@ -1,0 +1,649 @@
+/* AceCloud — white refinement layer
+   Overrides on top of styles.css for the white editorial direction */
+
+/* ── Curtain loader (slides upward on dismiss) ──────────── */
+.loader-curtain .lc-count {
+  font-family: "Geist", sans-serif;
+  font-weight: 400;
+  font-size: clamp(80px, 16vw, 260px);
+  letter-spacing: -0.04em;
+  line-height: 1;
+  color: #FAFAF8;
+  font-variant-numeric: tabular-nums;
+  user-select: none;
+}
+@keyframes curtain-sweep {
+  0%   { transform: translateY(0%); }
+  100% { transform: translateY(-105%); }
+}
+
+.loader-curtain {
+  position: fixed;
+  top: 0;
+  left: -5%;
+  width: 110%;
+  height: 100%;
+  z-index: 9999;
+  background: #0A0A0A;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+  will-change: transform;
+}
+
+.loader-curtain.slide-up {
+  animation: curtain-sweep 1.35s cubic-bezier(0.76, 0, 0.24, 1) forwards;
+}
+.loader-curtain .lc-text {
+  font-family: "Geist Mono", monospace;
+  font-size: clamp(11px, 1.1vw, 14px);
+  letter-spacing: 0.45em;
+  text-transform: uppercase;
+  color: rgba(250, 250, 247, 0.45);
+  user-select: none;
+}
+.loader-curtain .lc-corner {
+  position: absolute;
+  font-family: "Geist Mono", monospace;
+  font-size: 10px;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: rgba(250, 250, 247, 0.22);
+  user-select: none;
+}
+.loader-curtain .lc-tl { top: clamp(24px, 4vh, 40px); left: clamp(24px, 4vw, 48px); }
+.loader-curtain .lc-tr { top: clamp(24px, 4vh, 40px); right: clamp(24px, 4vw, 48px); }
+.loader-curtain .lc-bl { bottom: clamp(24px, 4vh, 40px); left: clamp(24px, 4vw, 48px); }
+.loader-curtain .lc-br { bottom: clamp(24px, 4vh, 40px); right: clamp(24px, 4vw, 48px); }
+
+/* ── Global white refinements ────────────────────────── */
+body, html { background: #fff !important; }
+.section { background: transparent !important; }
+
+/* Soften any dark fills that came from v1 */
+.cap-row, .case-card, .foot-wrap {
+  background: #fff !important;
+  border-color: var(--line) !important;
+}
+
+/* Tighter editorial type rhythm */
+.h-display, h1, h2 { letter-spacing: -0.035em !important; }
+.serif-italic { color: var(--accent-ink); }
+
+/* sect-head: sect-tag removed — collapse 2-col grid to full-width block */
+.sect-head {
+  display: block !important;
+  margin-bottom: clamp(40px, 7vh, 88px) !important;
+}
+.sect-head h2 {
+  max-width: 22ch;
+}
+
+/* Nav refinement — pure white, magnetic underline */
+.nav {
+  background: rgba(255,255,255,0.78) !important;
+  backdrop-filter: blur(18px) saturate(140%);
+  -webkit-backdrop-filter: blur(18px) saturate(140%);
+  border: 1px solid var(--line) !important;
+}
+.nav-links a { position: relative; transition: color 0.3s; }
+.nav-links a::after {
+  content: ""; position: absolute;
+  left: 8px; right: 8px; bottom: -4px;
+  height: 1px; background: var(--ink);
+  transform: scaleX(0); transform-origin: left;
+  transition: transform 0.35s cubic-bezier(0.2,0.8,0.2,1);
+}
+.nav-links a:hover::after,
+.nav-links a.active::after { transform: scaleX(1); }
+
+/* Hero refinement — bigger air */
+.hero { padding-top: clamp(140px, 18vh, 220px) !important; }
+
+/* Buttons — quieter, editorial */
+.btn {
+  background: var(--ink) !important;
+  color: #fff !important;
+  border-radius: 999px !important;
+  border: 1px solid var(--ink) !important;
+}
+.btn:hover { background: var(--accent) !important; border-color: var(--accent) !important; }
+.btn-ghost {
+  background: transparent !important;
+  color: var(--ink) !important;
+  border: 1px solid var(--ink) !important;
+}
+.btn-ghost:hover { background: var(--ink) !important; color: #fff !important; }
+
+/* Footer cleanup */
+.foot { background: #fff !important; border-top: 1px solid var(--line) !important; }
+.foot a:hover { color: var(--accent-ink) !important; }
+
+/* Capability animated band — new editorial signature */
+.cap-band {
+  border-block: 1px solid var(--line);
+  padding: clamp(80px, 12vh, 140px) 0;
+  overflow: hidden;
+}
+.cap-band-track {
+  display: flex; gap: clamp(40px, 6vw, 96px);
+  white-space: nowrap;
+  font-family: "Geist", sans-serif;
+  font-weight: 500;
+  font-size: clamp(64px, 9vw, 160px);
+  line-height: 1;
+  letter-spacing: -0.045em;
+  animation: cap-marquee 38s linear infinite;
+  will-change: transform;
+}
+.cap-band-track span {
+  display: inline-flex; align-items: center;
+  gap: clamp(40px, 6vw, 96px);
+  color: var(--ink);
+}
+.cap-band-track span::after {
+  content: ""; display: inline-block;
+  width: 10px; height: 10px; border-radius: 50%;
+  background: var(--accent);
+}
+.cap-band-track em {
+  font-family: "Instrument Serif", serif;
+  font-style: italic; font-weight: 400;
+  color: var(--mid-1);
+}
+@keyframes cap-marquee {
+  from { transform: translateX(0); }
+  to { transform: translateX(-50%); }
+}
+
+/* ── Hero V3 — Clean full-width editorial ───────────────── */
+.hv3 {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  padding: clamp(100px, 14vh, 180px) clamp(24px, 5vw, 80px) clamp(60px, 8vh, 100px);
+}
+
+.hv3-inner {
+  width: 100%;
+  max-width: var(--max, 1340px);
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  gap: clamp(28px, 4vh, 48px);
+}
+
+/* Eyebrow */
+.hv3-eyebrow {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  font-family: var(--mono);
+  font-size: 10px;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--mid-1);
+  flex-wrap: wrap;
+}
+.hv3-rule {
+  width: 1px; height: 11px;
+  background: var(--line);
+  flex-shrink: 0;
+}
+.hv3-avail {
+  display: inline-flex;
+  align-items: center;
+  gap: 7px;
+  color: var(--ink);
+}
+.dot-live {
+  width: 6px; height: 6px;
+  border-radius: 50%;
+  background: #22C55E;
+  display: inline-block;
+  flex-shrink: 0;
+  animation: pulse-live 2.6s ease-in-out infinite;
+}
+@keyframes pulse-live {
+  0%, 100% { opacity: 1; }
+  50%       { opacity: 0.35; }
+}
+
+/* Giant headline */
+.hv3-h {
+  display: flex;
+  flex-direction: column;
+  gap: 0.01em;
+  font-family: "Geist", sans-serif;
+  font-size: clamp(44px, 6.8vw, 112px);
+  font-weight: 400;
+  letter-spacing: -0.045em;
+  line-height: 0.93;
+  color: var(--ink);
+  margin: 0;
+}
+.hv3-h span { display: block; }
+.hv3-h-last { padding-left: 0.28em; }
+.hv3-h em {
+  font-family: "Instrument Serif", serif;
+  font-style: italic;
+  font-weight: 400;
+}
+
+/* Footer row: description + CTAs */
+.hv3-foot {
+  display: flex;
+  align-items: flex-end;
+  justify-content: space-between;
+  gap: clamp(24px, 4vw, 64px);
+  border-top: 1px solid var(--line);
+  padding-top: clamp(22px, 3vh, 32px);
+}
+.hv3-desc {
+  font-size: clamp(16px, 1.35vw, 22px);
+  line-height: 1.6;
+  color: var(--mid-1);
+  max-width: 46ch;
+  margin: 0;
+}
+.hv3-ctas {
+  display: flex;
+  gap: 10px;
+  flex-shrink: 0;
+}
+
+/* Stats strip */
+.hv3-stats {
+  display: flex;
+  align-items: center;
+}
+.hv3-stat {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+  padding: 0 clamp(18px, 2.2vw, 36px);
+}
+.hv3-stat:first-child { padding-left: 0; }
+.hv3-sdiv {
+  width: 1px; height: 34px;
+  background: var(--line);
+  flex-shrink: 0;
+}
+.hv3-sn {
+  font-family: "Geist", sans-serif;
+  font-size: clamp(26px, 2.8vw, 46px);
+  font-weight: 500;
+  letter-spacing: -0.035em;
+  color: var(--ink);
+  line-height: 1;
+}
+.hv3-sl {
+  font-family: var(--mono);
+  font-size: clamp(10px, 0.72vw, 13px);
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+  color: var(--mid-1);
+  line-height: 1.45;
+  max-width: 16ch;
+}
+
+/* ══════════════════════════════════════════════════
+   MOBILE  ≤ 700px
+   ══════════════════════════════════════════════════ */
+@media (max-width: 700px) {
+
+  /* ── Global rhythm: tighter section padding ── */
+  :root { --section: clamp(52px, 9vh, 72px); }
+  .section { padding-top: clamp(52px, 9vh, 72px) !important; padding-bottom: clamp(52px, 9vh, 72px) !important; }
+
+  /* ── Hero: remove dead space, content-driven height ── */
+  .hv3 {
+    min-height: 0;
+    padding-left: clamp(20px, 5vw, 32px);
+    padding-right: clamp(20px, 5vw, 32px);
+    padding-top: clamp(88px, 15vh, 120px);
+    padding-bottom: clamp(52px, 8vh, 72px);
+    align-items: flex-start;
+  }
+  .hv3-inner { gap: clamp(18px, 4vw, 26px); }
+  .hv3-eyebrow { font-size: 9px; gap: 8px; flex-wrap: wrap; }
+  .hv3-h { font-size: clamp(38px, 10.5vw, 54px); line-height: 0.95; }
+  .hv3-h-last { padding-left: 0.15em; }
+  .hv3-foot { flex-direction: column; align-items: flex-start; gap: 18px; }
+  .hv3-desc { font-size: 15px; max-width: 100%; line-height: 1.6; }
+  .hv3-ctas { flex-wrap: wrap; gap: 8px; }
+  .hv3-stats { flex-wrap: wrap; gap: 14px 0; width: 100%; }
+  .hv3-sdiv { display: none; }
+  .hv3-stat { padding: 0; width: 50%; }
+  .hv3-sn { font-size: clamp(24px, 7vw, 34px); }
+  .hv3-sl { font-size: 10px; max-width: 20ch; line-height: 1.4; }
+
+  /* ── Trust / metrics: 2×2 grid, proportional numbers ── */
+  .trust { padding: clamp(36px, 6vh, 52px) 0 !important; }
+  .trust-head {
+    grid-template-columns: 1fr 1fr !important;
+    gap: 0 !important;
+    margin-bottom: clamp(32px, 5vh, 48px) !important;
+  }
+  .metric {
+    padding: 20px 16px 20px 0 !important;
+    border-bottom: 1px solid var(--line) !important;
+    border-right: none !important;
+  }
+  .metric:nth-child(even) {
+    padding-left: 16px !important;
+    padding-right: 0 !important;
+    border-left: 1px solid var(--line) !important;
+  }
+  .metric .num { font-size: clamp(34px, 9vw, 48px) !important; }
+  .metric .label { margin-top: 8px !important; padding-top: 8px !important; font-size: 10px !important; }
+
+  /* ── Cap-band marquee ── */
+  .cap-band-track { font-size: clamp(28px, 9vw, 44px) !important; }
+
+  /* ── Section headings ── */
+  .sect-head h2,
+  .h-1 { font-size: clamp(30px, 8vw, 48px) !important; max-width: 100% !important; }
+  .sect-head { margin-bottom: clamp(28px, 5vh, 44px) !important; }
+
+  /* ── Services: prevent name wrapping ── */
+  .svc-row { padding: 16px 0 !important; }
+  .svc-row .name { font-size: clamp(17px, 4.8vw, 22px) !important; letter-spacing: -0.02em !important; line-height: 1.1 !important; }
+  .svc-row .desc,
+  .svc-row .deliv { display: none !important; }
+
+  /* ── Work cards ── */
+  .work-card .visual { aspect-ratio: 4/3 !important; }
+
+  /* ── Process section ── */
+  .process { margin: 0 12px !important; padding: clamp(28px, 5vh, 48px) clamp(18px, 5vw, 32px) !important; border-radius: 16px !important; }
+
+  /* ── Why cards: kill dead space from min-height ── */
+  .why-grid { grid-template-columns: 1fr 1fr !important; gap: 10px !important; }
+  .why-card {
+    grid-column: span 1 !important;
+    padding: 18px !important;
+    min-height: 0 !important;
+    gap: 10px !important;
+  }
+  .why-card .ico { width: 30px !important; height: 30px !important; font-size: 11px !important; }
+  .why-card .why-t { margin-top: 4px !important; font-size: clamp(15px, 4vw, 18px) !important; }
+  .why-card .why-d { font-size: 13px !important; max-width: 100% !important; }
+
+  /* ── Testimonials ── */
+  .tst-quote { font-size: clamp(17px, 4.8vw, 22px) !important; line-height: 1.45 !important; }
+  .tst-side { display: none !important; }
+
+  /* ── CTA block ── */
+  .cta { padding: clamp(44px, 7vh, 72px) clamp(20px, 5vw, 32px) !important; border-radius: 16px !important; }
+  .cta-headline { font-size: clamp(30px, 8vw, 48px) !important; }
+  .cta-foot { grid-template-columns: 1fr !important; gap: 14px !important; }
+
+  /* ── Footer ── */
+  .foot-mega { font-size: clamp(32px, 10vw, 48px) !important; line-height: 0.9 !important; }
+  .foot-grid { grid-template-columns: 1fr 1fr !important; gap: 28px 16px !important; }
+  .foot-col h4 { margin-bottom: 10px !important; }
+}
+
+/* ── Small mobile (≤420px) ── */
+@media (max-width: 420px) {
+  .hv3-h { font-size: clamp(34px, 10vw, 42px); }
+  .why-grid { grid-template-columns: 1fr !important; }
+  .why-card { grid-column: span 1 !important; }
+  .btn, .btn-ghost { padding: 12px 20px !important; font-size: 13px !important; }
+  .metric .num { font-size: clamp(30px, 8.5vw, 42px) !important; }
+}
+
+/* ─── (hv2 styles removed) ─────────────────────────────── */
+.hv2 {
+  position: relative;
+  /* break out of shell container to fill full viewport width */
+  width: 100vw;
+  left: 50%;
+  transform: translateX(-50%);
+  display: grid;
+  grid-template-columns: 56fr 44fr;
+  min-height: 100vh;
+  overflow: hidden;
+}
+
+/* ── Left copy column ── */
+.hv2-l {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding-top: clamp(100px, 14vh, 180px);
+  padding-bottom: clamp(80px, 10vh, 120px);
+  padding-right: clamp(40px, 5vw, 80px);
+  /* left edge tracks container gutter on wide screens */
+  padding-left: max(5vw, calc((100vw - 1340px) / 2 + 5vw));
+  gap: clamp(36px, 5.5vh, 64px);
+  position: relative;
+  z-index: 2;
+}
+
+.hv2-eyebrow {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  font-family: var(--mono);
+  font-size: 10px;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--mid-1);
+}
+.hv2-eyebrow .dot-live {
+  width: 6px; height: 6px; border-radius: 50%;
+  background: #22C55E;
+  display: inline-block;
+  margin-right: 7px;
+  flex-shrink: 0;
+  animation: pulse-live 2.4s ease-in-out infinite;
+}
+@keyframes pulse-live {
+  0%, 100% { opacity: 1; }
+  50%       { opacity: 0.4; }
+}
+
+/* Giant display headline */
+.hv2-h {
+  display: flex;
+  flex-direction: column;
+  gap: 0.02em;
+  font-family: "Geist", sans-serif;
+  font-size: clamp(58px, 7.8vw, 118px);
+  font-weight: 400;
+  letter-spacing: -0.045em;
+  line-height: 0.92;
+  color: var(--ink);
+  margin: 0;
+}
+.hv2-w { display: block; }
+.hv2-w-indent { padding-left: 0.42em; }
+.hv2-h em {
+  font-family: "Instrument Serif", serif;
+  font-style: italic;
+  font-weight: 400;
+}
+
+/* Actions row */
+.hv2-actions {
+  display: flex;
+  align-items: center;
+  gap: 24px;
+  flex-wrap: wrap;
+}
+
+.hv2-link {
+  font-family: var(--mono);
+  font-size: 11px;
+  letter-spacing: 0.07em;
+  text-transform: uppercase;
+  color: var(--mid-1);
+  text-decoration: none;
+  transition: color 0.25s;
+  display: inline-flex;
+  align-items: center;
+  gap: 5px;
+}
+.hv2-link:hover { color: var(--ink); }
+
+/* ── Scroll cue (left edge, vertical) ── */
+.hv2-scroll {
+  position: absolute;
+  left: max(5vw, calc((100vw - 1340px) / 2 + 5vw));
+  bottom: clamp(28px, 4vh, 44px);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 10px;
+  z-index: 3;
+}
+.hv2-scroll-bar {
+  width: 1px;
+  height: 36px;
+  background: var(--line);
+}
+.hv2-scroll span {
+  font-family: var(--mono);
+  font-size: 9px;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  color: var(--mid-1);
+  writing-mode: vertical-rl;
+}
+
+/* ── Right dark showcase column ── */
+.hv2-r {
+  background: #0A0A0A;
+  display: flex;
+  flex-direction: column;
+  padding: clamp(44px, 6vw, 72px);
+  position: relative;
+  overflow: hidden;
+  text-decoration: none !important;
+  cursor: pointer;
+}
+/* Subtle violet vignette for depth */
+.hv2-r::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: radial-gradient(ellipse at 85% 15%, rgba(99,102,241,0.14) 0%, transparent 55%);
+  pointer-events: none;
+}
+/* Grid-line texture */
+.hv2-r::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background-image:
+    linear-gradient(rgba(255,255,255,0.025) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(255,255,255,0.025) 1px, transparent 1px);
+  background-size: 48px 48px;
+  pointer-events: none;
+}
+
+.hv2-r-inner {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  will-change: opacity;
+  position: relative;
+  z-index: 1;
+}
+
+.hv2-r-tag {
+  font-family: var(--mono);
+  font-size: 10px;
+  letter-spacing: 0.13em;
+  text-transform: uppercase;
+  color: rgba(255,255,255,0.28);
+  margin-bottom: auto;
+}
+
+/* The big metric — center-of-gravity */
+.hv2-r-metric {
+  font-family: "Geist", sans-serif;
+  font-size: clamp(72px, 10vw, 152px);
+  font-weight: 500;
+  letter-spacing: -0.055em;
+  line-height: 1;
+  color: #fff;
+  margin-bottom: 10px;
+}
+
+.hv2-r-sub {
+  font-family: var(--mono);
+  font-size: 10px;
+  letter-spacing: 0.09em;
+  text-transform: uppercase;
+  color: rgba(255,255,255,0.35);
+  margin-bottom: 40px;
+}
+
+/* Client footer row */
+.hv2-r-footer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-top: 1px solid rgba(255,255,255,0.08);
+  padding-top: 18px;
+  margin-bottom: 20px;
+  position: relative;
+  z-index: 1;
+}
+.hv2-r-client {
+  font-family: "Geist", sans-serif;
+  font-size: clamp(14px, 1.4vw, 19px);
+  font-weight: 500;
+  letter-spacing: -0.02em;
+  color: #fff;
+}
+.hv2-r-arr {
+  width: 34px; height: 34px;
+  border-radius: 50%;
+  border: 1px solid rgba(255,255,255,0.14);
+  display: flex; align-items: center; justify-content: center;
+  color: rgba(255,255,255,0.45);
+  font-size: 13px;
+  flex-shrink: 0;
+  transition: border-color 0.25s, color 0.25s;
+}
+.hv2-r:hover .hv2-r-arr {
+  border-color: rgba(255,255,255,0.4);
+  color: #fff;
+}
+
+/* Progress ticks */
+.hv2-r-prog {
+  display: flex;
+  gap: 5px;
+  align-items: center;
+  position: relative;
+  z-index: 1;
+}
+.hv2-tick {
+  height: 2px;
+  width: 18px;
+  border: none;
+  background: rgba(255,255,255,0.18);
+  cursor: pointer;
+  padding: 6px 0;
+  background-clip: content-box;
+  transition: width 0.35s ease, background 0.35s ease;
+}
+.hv2-tick.active {
+  width: 34px;
+  background: rgba(255,255,255,0.65);
+  background-clip: content-box;
+}
+
+/* Responsive */
+@media (max-width: 860px) {
+  .hv2 { grid-template-columns: 1fr; }
+  .hv2-l { padding-top: clamp(80px, 14vh, 140px); padding-right: 5vw; }
+  .hv2-r { min-height: clamp(260px, 56vw, 400px); }
+  .hv2-scroll { display: none; }
+}

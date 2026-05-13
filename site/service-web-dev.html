@@ -1,0 +1,162 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>Web Development — AceCloud</title>
+<meta name="description" content="Next.js, headless CMS and edge infrastructure engineered for speed, scale and a 95+ Lighthouse score on every page that ships."/>
+<link rel="preconnect" href="https://fonts.googleapis.com"/>
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
+<link href="https://fonts.googleapis.com/css2?family=Geist:wght@300;400;500;600&family=Geist+Mono:wght@400;500&family=Instrument+Serif:ital@0;1&display=swap" rel="stylesheet"/>
+<link rel="stylesheet" href="styles.css"/>
+<link rel="stylesheet" href="styles-v2.css"/>
+<link rel="stylesheet" href="styles-pages.css"/>
+<style>
+.serif-italic{font-family:"Instrument Serif",serif!important;font-style:italic;font-weight:400}
+.svc-faq { padding: clamp(80px,12vh,140px) 0; border-top: 1px solid var(--line); }
+.svc-faq .container { max-width: 900px; }
+.faq-item { border-bottom: 1px solid var(--line); padding: 28px 0; }
+.faq-item h4 { font-family: var(--display); font-weight: 500; font-size: clamp(18px,1.5vw,24px); letter-spacing: -0.02em; margin: 0 0 14px; }
+.faq-item p { font-size: 15.5px; line-height: 1.6; color: var(--mid-1); margin: 0; max-width: 70ch; }
+.svc-clients { padding: clamp(60px,10vh,120px) 0; background: var(--paper); }
+.client-grid { display: grid; grid-template-columns: repeat(3,1fr); gap: 24px; margin-top: clamp(40px,6vh,64px); }
+.client-card { border: 1px solid var(--line); border-radius: var(--r-md); padding: 32px; background: var(--bg); }
+.client-card .cl-tag { font-family: var(--mono); font-size: 10.5px; text-transform: uppercase; letter-spacing: 0.08em; color: var(--mid-1); margin-bottom: 14px; }
+.client-card .cl-name { font-family: var(--display); font-weight: 500; font-size: clamp(22px,2vw,32px); letter-spacing: -0.025em; margin: 0 0 12px; }
+.client-card .cl-result { font-family: var(--mono); font-size: 11px; color: var(--accent-ink); letter-spacing: 0.06em; text-transform: uppercase; padding: 5px 12px; border: 1px solid var(--accent-ink); border-radius: var(--r-pill); display: inline-block; margin-bottom: 16px; }
+.client-card p { font-size: 14px; line-height: 1.55; color: var(--mid-1); margin: 0; }
+.svc-cta { padding: clamp(80px,12vh,140px) 0; }
+.svc-cta-inner { background: var(--ink); color: var(--paper); border-radius: var(--r-lg); padding: clamp(48px,8vh,100px) clamp(28px,5vw,80px); text-align: center; }
+.svc-cta-inner h2 { font-family: var(--display); font-weight: 500; font-size: clamp(36px,6vw,96px); letter-spacing: -0.04em; line-height: 0.95; margin: 0 0 28px; }
+.svc-cta-inner h2 em { font-family: "Instrument Serif",serif; font-style: italic; font-weight: 400; color: rgba(250,250,247,0.5); }
+.svc-cta-inner p { font-size: clamp(16px,1.3vw,20px); color: rgba(250,250,247,0.65); max-width: 52ch; margin: 0 auto 40px; line-height: 1.5; }
+.btn-light { background: var(--paper); color: var(--ink); padding: 16px 30px; border-radius: var(--r-pill); font-family: var(--display); font-weight: 500; font-size: 15px; display: inline-flex; align-items: center; gap: 10px; text-decoration: none; border: none; cursor: pointer; transition: transform 0.35s cubic-bezier(0.34,1.56,0.64,1), box-shadow 0.3s; position: relative; overflow: hidden; }
+.btn-light::after { content: ""; position: absolute; inset: 0; background: var(--accent); transform: scaleX(0); transform-origin: left center; transition: transform 0.45s cubic-bezier(0.2,0.8,0.2,1); }
+.btn-light > * { position: relative; z-index: 1; }
+.btn-light:hover { transform: translateY(-2px); box-shadow: 0 8px 28px rgba(250,250,247,0.15); }
+.btn-light:hover::after { transform: scaleX(1); }
+@media (max-width:768px) { .client-grid { grid-template-columns: 1fr; } }
+</style>
+</head>
+<body>
+<script>window.PAGE_ACTIVE="services";</script>
+<div id="nav-mount"></div>
+<main class="shell shell-v2">
+
+  <section class="container page-hero">
+    <div class="page-eyebrow rv"><span class="num">03</span>Service · Engineering</div>
+    <h1 class="page-title rv">Infrastructure engineered to <em>scale</em>.</h1>
+    <p class="page-lede rv">We build on Next.js with headless CMS and edge infrastructure — not because it's fashionable, but because it gives your marketing team editorial speed, your product team a component system, and your engineering team something they're not embarrassed to maintain. Every site ships with a 95+ Lighthouse score as a hard requirement, not a stretch goal.</p>
+    <div class="page-meta">
+      <div class="rv"><div class="l">Framework</div><div class="v">Next.js 14</div></div>
+      <div class="rv"><div class="l">Lighthouse target</div><div class="v">95+ / page</div></div>
+      <div class="rv"><div class="l">CMS</div><div class="v">Sanity · Contentful</div></div>
+      <div class="rv"><div class="l">Hosting</div><div class="v">Vercel · Cloudflare</div></div>
+    </div>
+  </section>
+
+  <section class="cap-section" id="included">
+    <div class="container cap-grid">
+      <div class="head rv">
+        <div class="cn">What's included</div>
+        <h3>Built to be maintained. Not just launched.</h3>
+        <p class="pitch">Most agency-built sites are a black box. Ours are documented, testable and built with the people who will maintain them in mind.</p>
+      </div>
+      <div class="body">
+        <div class="cap-block rv"><h4>Next.js front-end</h4><p>Strict TypeScript, component library that mirrors the design system 1:1, Storybook for component QA and automated accessibility checks on every PR. We use Tailwind or vanilla-extract depending on your team's preferences — not ours.</p></div>
+        <div class="cap-block rv"><h4>Headless CMS integration</h4><p>Sanity, Contentful or Payload — chosen based on your editorial workflow, not the latest developer discourse. Custom block builders, live preview, image pipelines and a content ops handoff so your team can publish independently from day one.</p></div>
+        <div class="cap-block rv"><h4>Edge infrastructure</h4><p>Vercel or Cloudflare Workers. Edge functions for A/B middleware, geo-routing and personalisation. ISR and on-demand revalidation. Image optimisation baked in. SOC 2-ready deployment if your compliance team needs it.</p></div>
+        <div class="cap-block rv"><h4>Performance baseline</h4><p>95+ Lighthouse on every page is a hard requirement. We enforce it with automated CI checks — if a PR would drop the score below threshold, it doesn't merge. Core Web Vitals monitoring in production via real user metrics, not lab data.</p></div>
+        <div class="cap-stack rv">
+          <div class="cap-stack-cell"><div class="k">Framework</div><div class="vv">Next.js 14</div></div>
+          <div class="cap-stack-cell"><div class="k">Language</div><div class="vv">TypeScript (strict)</div></div>
+          <div class="cap-stack-cell"><div class="k">CMS options</div><div class="vv">Sanity / Contentful / Payload</div></div>
+          <div class="cap-stack-cell"><div class="k">Hosting</div><div class="vv">Vercel · Cloudflare</div></div>
+          <div class="cap-stack-cell"><div class="k">Lighthouse target</div><div class="vv">95+ every page</div></div>
+          <div class="cap-stack-cell"><div class="k">Testing</div><div class="vv">Playwright + Storybook</div></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="cap-section">
+    <div class="container cap-grid">
+      <div class="head rv">
+        <div class="cn">How we work</div>
+        <h3>Ship behind a flag. Reveal progressively.</h3>
+        <p class="pitch">We ship in two-week sprints and deploy behind feature flags so you can review in production before anything goes live to users.</p>
+      </div>
+      <div class="body">
+        <div class="cap-block rv"><h4>Week 1–2 · Technical discovery</h4><p>Stack audit, CMS requirements, integration inventory (analytics, CRM, auth), performance baseline on existing site and a technical architecture brief. We agree on the stack before we write a line of code.</p></div>
+        <div class="cap-block rv"><h4>Week 2–6 · Build</h4><p>Component library first, then pages. Continuous deployment to a preview environment so you're reviewing in a real browser, not a Figma prototype. CMS structure built alongside the components it powers.</p></div>
+        <div class="cap-block rv"><h4>Week 6–8 · QA &amp; launch</h4><p>Cross-browser QA, accessibility audit (WCAG 2.1 AA), performance audit, security review and a pre-launch checklist. Launch is coordinated with your team so it happens when you're ready, not when we're done.</p></div>
+        <div class="cap-block rv"><h4>Post-launch support</h4><p>60-day hypercare window: we monitor uptime, Core Web Vitals and error rates. Bug fixes within 24 hours. We also run a 30-day retrospective and hand over a documented runbook for your team.</p></div>
+      </div>
+    </div>
+  </section>
+
+  <section class="svc-clients">
+    <div class="container">
+      <div class="page-eyebrow rv">Past work · Engineering</div>
+      <h2 class="page-title rv" style="font-size:clamp(36px,5vw,72px)">Infrastructure we've shipped.</h2>
+      <div class="client-grid">
+        <div class="client-card rv">
+          <div class="cl-tag">Next.js · 2025</div>
+          <div class="cl-name">Northwind</div>
+          <div class="cl-result">99.998% uptime / 30d</div>
+          <p>A DevOps platform site built on Next.js 14 with a Sanity CMS and Cloudflare edge deployment. 97 Lighthouse average across all pages at launch. Shipped in seven weeks from design handoff.</p>
+        </div>
+        <div class="client-card rv">
+          <div class="cl-tag">Headless · 2025</div>
+          <div class="cl-name">Mercato</div>
+          <div class="cl-result">11.2s average deploy</div>
+          <p>A headless commerce build with Sanity CMS, custom A/B middleware on Vercel Edge and a checkout integration that took conversion from 1.2% to 3.8% with no changes to ad spend.</p>
+        </div>
+        <div class="client-card rv">
+          <div class="cl-tag">Next.js · 2025</div>
+          <div class="cl-name">Atlas Foundry</div>
+          <div class="cl-result">+312% organic / 6mo</div>
+          <p>A programmatic SEO build on Next.js with over 400 auto-generated landing pages, ISR revalidation and a Contentful CMS their five-person marketing team runs without developer support.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="svc-faq">
+    <div class="container">
+      <div class="page-eyebrow rv">Questions</div>
+      <h2 class="page-title rv" style="font-size:clamp(36px,5vw,72px)">Common questions answered honestly.</h2>
+      <div class="faq-item rv">
+        <h4>Why Next.js and not Webflow, Framer or WordPress?</h4>
+        <p>For simple marketing sites with a content team, Webflow or Framer is often the right call and we'll say so. Next.js is the right choice when you need performance at scale, programmatic page generation, a custom design system, complex integrations or a site that will live inside a larger product architecture. We don't have a preferred stack — we have the right stack for your situation.</p>
+      </div>
+      <div class="faq-item rv">
+        <h4>Can you take over a site someone else built?</h4>
+        <p>Yes, though we do a technical audit first to understand what we're inheriting. We'll give you an honest assessment of the existing codebase, identify what's worth keeping and what needs replacing, and scope the engagement from there. We don't charge for the audit.</p>
+      </div>
+      <div class="faq-item rv">
+        <h4>Do you provide hosting?</h4>
+        <p>We set up and configure Vercel or Cloudflare deployments, but the hosting account is in your name from day one. We don't hold your infrastructure hostage. After launch, your team controls the deployment pipeline and we document everything so you can operate it independently.</p>
+      </div>
+      <div class="faq-item rv">
+        <h4>What CMS do you recommend?</h4>
+        <p>Sanity for most cases — it's flexible, developer-friendly and has the best real-time preview experience. Contentful if you need enterprise-grade permissions and a well-established workflow. Payload if you want a self-hosted, code-first option. We're opinionated but not dogmatic — we'll pick the one that fits your team's actual content workflow.</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="svc-cta">
+    <div class="container">
+      <div class="svc-cta-inner rv">
+        <h2>Ready to build something <em>that lasts</em>?</h2>
+        <p>Tell us about your current stack and what's holding you back. We'll send a written technical recommendation within 48 hours.</p>
+        <a href="book.html" class="btn-light"><span>Start your engineering project</span><span>↗</span></a>
+      </div>
+    </div>
+  </section>
+
+</main>
+<div id="footer-mount"></div>
+<script src="page-chrome.js"></script>
+</body>
+</html>

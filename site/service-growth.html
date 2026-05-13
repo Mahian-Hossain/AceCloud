@@ -1,0 +1,139 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>Growth Infrastructure — AceCloud</title>
+<meta name="description" content="Technical SEO, analytics, A/B testing and conversion engineering wired into your site from day one — not bolted on by a different vendor six months later."/>
+<link rel="preconnect" href="https://fonts.googleapis.com"/>
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
+<link href="https://fonts.googleapis.com/css2?family=Geist:wght@300;400;500;600&family=Geist+Mono:wght@400;500&family=Instrument+Serif:ital@0;1&display=swap" rel="stylesheet"/>
+<link rel="stylesheet" href="styles.css"/>
+<link rel="stylesheet" href="styles-v2.css"/>
+<link rel="stylesheet" href="styles-pages.css"/>
+<style>
+.serif-italic{font-family:"Instrument Serif",serif!important;font-style:italic;font-weight:400}
+.svc-faq { padding: clamp(80px,12vh,140px) 0; border-top: 1px solid var(--line); }
+.svc-faq .container { max-width: 900px; }
+.faq-item { border-bottom: 1px solid var(--line); padding: 28px 0; }
+.faq-item h4 { font-family: var(--display); font-weight: 500; font-size: clamp(18px,1.5vw,24px); letter-spacing: -0.02em; margin: 0 0 14px; }
+.faq-item p { font-size: 15.5px; line-height: 1.6; color: var(--mid-1); margin: 0; max-width: 70ch; }
+.svc-clients { padding: clamp(60px,10vh,120px) 0; background: var(--paper); }
+.client-grid { display: grid; grid-template-columns: repeat(3,1fr); gap: 24px; margin-top: clamp(40px,6vh,64px); }
+.client-card { border: 1px solid var(--line); border-radius: var(--r-md); padding: 32px; background: var(--bg); }
+.client-card .cl-tag { font-family: var(--mono); font-size: 10.5px; text-transform: uppercase; letter-spacing: 0.08em; color: var(--mid-1); margin-bottom: 14px; }
+.client-card .cl-name { font-family: var(--display); font-weight: 500; font-size: clamp(22px,2vw,32px); letter-spacing: -0.025em; margin: 0 0 12px; }
+.client-card .cl-result { font-family: var(--mono); font-size: 11px; color: var(--accent-ink); letter-spacing: 0.06em; text-transform: uppercase; padding: 5px 12px; border: 1px solid var(--accent-ink); border-radius: var(--r-pill); display: inline-block; margin-bottom: 16px; }
+.client-card p { font-size: 14px; line-height: 1.55; color: var(--mid-1); margin: 0; }
+.svc-cta { padding: clamp(80px,12vh,140px) 0; }
+.svc-cta-inner { background: var(--ink); color: var(--paper); border-radius: var(--r-lg); padding: clamp(48px,8vh,100px) clamp(28px,5vw,80px); text-align: center; }
+.svc-cta-inner h2 { font-family: var(--display); font-weight: 500; font-size: clamp(36px,6vw,96px); letter-spacing: -0.04em; line-height: 0.95; margin: 0 0 28px; }
+.svc-cta-inner h2 em { font-family: "Instrument Serif",serif; font-style: italic; font-weight: 400; color: rgba(250,250,247,0.5); }
+.svc-cta-inner p { font-size: clamp(16px,1.3vw,20px); color: rgba(250,250,247,0.65); max-width: 52ch; margin: 0 auto 40px; line-height: 1.5; }
+.btn-light { background: var(--paper); color: var(--ink); padding: 16px 30px; border-radius: var(--r-pill); font-family: var(--display); font-weight: 500; font-size: 15px; display: inline-flex; align-items: center; gap: 10px; text-decoration: none; border: none; cursor: pointer; transition: transform 0.35s cubic-bezier(0.34,1.56,0.64,1), box-shadow 0.3s; position: relative; overflow: hidden; }
+.btn-light::after { content: ""; position: absolute; inset: 0; background: var(--accent); transform: scaleX(0); transform-origin: left center; transition: transform 0.45s cubic-bezier(0.2,0.8,0.2,1); }
+.btn-light > * { position: relative; z-index: 1; }
+.btn-light:hover { transform: translateY(-2px); box-shadow: 0 8px 28px rgba(250,250,247,0.15); }
+.btn-light:hover::after { transform: scaleX(1); }
+@media (max-width:768px) { .client-grid { grid-template-columns: 1fr; } }
+</style>
+</head>
+<body>
+<script>window.PAGE_ACTIVE="services";</script>
+<div id="nav-mount"></div>
+<main class="shell shell-v2">
+
+  <section class="container page-hero">
+    <div class="page-eyebrow rv"><span class="num">04</span>Service · Growth</div>
+    <h1 class="page-title rv">Growth that <em>compounds</em>, not spends.</h1>
+    <p class="page-lede rv">Most growth work is additive — you spend more to get more. We build compounding growth infrastructure: technical SEO that earns organic traffic for years, analytics that tell you what's actually working, and A/B systems that improve conversion on every sprint cycle. Wired in from the first line of code, not retrofitted by a different vendor six months later.</p>
+    <div class="page-meta">
+      <div class="rv"><div class="l">Avg organic lift</div><div class="v">+240% / 6mo</div></div>
+      <div class="rv"><div class="l">Avg conv. lift</div><div class="v">+3.4×</div></div>
+      <div class="rv"><div class="l">Reporting cadence</div><div class="v">Weekly</div></div>
+      <div class="rv"><div class="l">Starting at</div><div class="v">$6K/mo</div></div>
+    </div>
+  </section>
+
+  <section class="cap-section" id="included">
+    <div class="container cap-grid">
+      <div class="head rv">
+        <div class="cn">What's included</div>
+        <h3>Every lever that moves the number.</h3>
+        <p class="pitch">We don't pick one channel and call it growth. We build the measurement layer, fix the technical foundation, then compound from there.</p>
+      </div>
+      <div class="body">
+        <div class="cap-block rv"><h4>Technical SEO</h4><p>Core Web Vitals, structured data, internal linking architecture, XML sitemaps, canonical setup and crawl budget optimisation. Audited monthly. We fix the issues in the codebase — we don't just report them. If we built the site, technical SEO is already baked in.</p></div>
+        <div class="cap-block rv"><h4>Content &amp; programmatic SEO</h4><p>Topic cluster mapping against your ICP's actual search intent. Pillar pages, programmatic landing page systems (often 200–500 pages auto-generated from structured data) and an editorial calendar that doesn't dilute brand voice for traffic volume.</p></div>
+        <div class="cap-block rv"><h4>Analytics &amp; attribution</h4><p>GA4 plus server-side event tracking (no more cookie-blocked sessions), custom dashboards in Looker Studio, and — for paid teams — geo-holdout incrementality tests so you know what spend is actually doing the work.</p></div>
+        <div class="cap-block rv"><h4>Conversion engineering</h4><p>A/B testing infrastructure (Statsig or Optimizely, deployed at the edge so SEO and page speed don't bend), a hypothesis library scored by ICE, and two active experiments per sprint. We measure conversion at every funnel stage, not just the final CTA.</p></div>
+        <div class="cap-deliv rv"><span>Technical SEO audit</span><span>Content strategy</span><span>Programmatic SEO</span><span>Schema markup</span><span>GA4 setup</span><span>A/B infrastructure</span><span>Weekly reporting</span><span>AI visibility</span></div>
+      </div>
+    </div>
+  </section>
+
+  <section class="svc-clients">
+    <div class="container">
+      <div class="page-eyebrow rv">Past work · Growth</div>
+      <h2 class="page-title rv" style="font-size:clamp(36px,5vw,72px)">Numbers that moved.</h2>
+      <div class="client-grid">
+        <div class="client-card rv">
+          <div class="cl-tag">SEO · 2024–2025</div>
+          <div class="cl-name">Atlas Foundry</div>
+          <div class="cl-result">+312% organic / 6mo</div>
+          <p>A programmatic SEO strategy built on 400+ auto-generated landing pages targeting long-tail industrial search terms. Combined with a content cluster strategy around their core product — organic traffic tripled in six months and is still compounding.</p>
+        </div>
+        <div class="client-card rv">
+          <div class="cl-tag">CRO · 2025</div>
+          <div class="cl-name">Mercato</div>
+          <div class="cl-result">+3.1× conversion</div>
+          <p>Funnel audit identified three friction points in the product discovery flow. We redesigned the category pages, rewrote product descriptions and A/B tested two checkout variants. Conversion went from 1.2% to 3.8% on the same ad spend.</p>
+        </div>
+        <div class="client-card rv">
+          <div class="cl-tag">Analytics · 2025</div>
+          <div class="cl-name">Northwind</div>
+          <div class="cl-result">Accurate attribution</div>
+          <p>Built a server-side analytics stack using GA4 + BigQuery + Looker Studio that gave their growth team accurate attribution for the first time. Previously, 38% of conversions were appearing as "direct" due to blocked scripts. Fixed in two weeks.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="svc-faq">
+    <div class="container">
+      <div class="page-eyebrow rv">Questions</div>
+      <h2 class="page-title rv" style="font-size:clamp(36px,5vw,72px)">Straight answers.</h2>
+      <div class="faq-item rv">
+        <h4>How long before we see results from SEO?</h4>
+        <p>Technical SEO fixes show up in Google Search Console within 4–6 weeks. Programmatic content starts indexing within 4–8 weeks. Meaningful traffic movement typically takes 3–4 months. We set this expectation in writing at the start of every engagement and track against it with a weekly report.</p>
+      </div>
+      <div class="faq-item rv">
+        <h4>Do you run paid media?</h4>
+        <p>Yes — Google, Meta, LinkedIn and TikTok. But we build the measurement layer before we touch paid spend. There's no point spending on ads if you can't attribute the conversions accurately. We audit your analytics setup first, fix it if needed, then run paid on top of a solid foundation.</p>
+      </div>
+      <div class="faq-item rv">
+        <h4>We already have an SEO agency. What do you do differently?</h4>
+        <p>Most SEO agencies produce audit reports and keyword lists. We implement. We change the code, build the pages and fix the technical issues ourselves — we don't hand a report to your dev team and wait. We also work on the same team as the engineers who built your site, so nothing gets lost in translation.</p>
+      </div>
+      <div class="faq-item rv">
+        <h4>What's your reporting cadence?</h4>
+        <p>Weekly written report: what we shipped, what's moving, what's next and what we learned from any active experiments. Monthly strategy session to review the quarter's hypotheses and set the next priority stack. No endless decks — just a clean dashboard and a clear narrative.</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="svc-cta">
+    <div class="container">
+      <div class="svc-cta-inner rv">
+        <h2>Let's build growth that <em>compounds</em>.</h2>
+        <p>Share your current analytics setup and your biggest conversion bottleneck. We'll come back with a prioritised action plan within 48 hours.</p>
+        <a href="book.html" class="btn-light"><span>Start your growth engagement</span><span>↗</span></a>
+      </div>
+    </div>
+  </section>
+
+</main>
+<div id="footer-mount"></div>
+<script src="page-chrome.js"></script>
+</body>
+</html>

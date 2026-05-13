@@ -1,0 +1,56 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>A 95+ Lighthouse score is a brand decision — AceCloud Journal</title>
+<link rel="preconnect" href="https://fonts.googleapis.com"/>
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
+<link href="https://fonts.googleapis.com/css2?family=Geist:wght@300;400;500;600&family=Geist+Mono:wght@400;500&family=Instrument+Serif:ital@0;1&display=swap" rel="stylesheet"/>
+<link rel="stylesheet" href="styles.css"/>
+<link rel="stylesheet" href="styles-v2.css"/>
+<link rel="stylesheet" href="styles-pages.css"/>
+<link rel="stylesheet" href="blog-article.css"/>
+</head>
+<body>
+<script>window.PAGE_ACTIVE="blog";</script>
+<div id="nav-mount"></div>
+
+<main class="shell shell-v2">
+  <article class="article">
+    <div class="container">
+      <div class="a-meta"><span>Feb 24 · 2026</span><span class="dot"></span><span>Field note · 7 min</span><span class="dot"></span><span>Devansh Kapoor</span></div>
+      <h1>A <em>95+</em> Lighthouse score is a brand decision.</h1>
+      <p class="lede">Performance budgets are how we keep the marketing team's "one more video" instinct from breaking the trust we just spent twelve weeks building.</p>
+
+      <div class="body">
+        <p>Performance is treated as an engineering hygiene metric in most companies. We treat it as a brand hygiene metric. The first impression of any brand on the web is the half-second between click and first paint. If that half-second turns into three seconds, the brand impression is "slow, unserious, expensive". You can hand-letter the wordmark for nine months and lose that impression in three seconds of loading.</p>
+
+        <h2>What we enforce.</h2>
+        <p>Every page we ship is gated in CI on Lighthouse 95+ across performance, accessibility, best-practices and SEO. We enforce a per-page JavaScript budget of 170KB gzipped. Hero images are width-served, AVIF first, JPEG fallback. We refuse autoplay video on landing pages — it's almost always a lose-lose. We pre-render everything that can be pre-rendered and we use edge ISR for the rest. None of this is heroic engineering. It's a small set of refusals, applied consistently.</p>
+
+        <blockquote>Performance is the only brand attribute the customer measures unconsciously. You can fake the headline. You can't fake the first paint.</blockquote>
+
+        <h2>The conversations that get easier.</h2>
+        <p>When performance is a published budget rather than a vague intention, the conversation with marketing becomes finite. "We'd love a 12MB scroll-triggered video on the homepage" gets a one-sentence answer: yes, if we cut something else, here's what. It is not a moral debate. It is a budget.</p>
+
+        <p>The same conversation is impossible to have without a budget. The video gets added. Then the chat widget. Then the heat-mapper. Then the four-vendor analytics stack. Six months later the page weighs 8MB and nobody can remember the day it broke.</p>
+
+        <h2>What scoring 95+ buys you.</h2>
+        <p>Two things, mostly. First, the visceral feeling of a site that is fast and polite, which we can't quantify but the customer registers immediately. Second, every downstream SEO and AI-visibility surface that uses page-experience as a ranking input — Google classical, AI Overviews, LLM crawlers that down-rank slow pages. The 95+ score is not vanity. It is a small but meaningful lever on the whole demand surface.</p>
+
+        <p>It is also a refusal we make on behalf of the brand, against everyone in the company who'd quietly prefer a slower site with one more thing on it. The role of the studio is to keep saying no.</p>
+      </div>
+
+      <div class="signoff">
+        <a href="blog.html">← Back to journal</a>
+        <span>DK / 02.2026</span>
+      </div>
+    </div>
+  </article>
+</main>
+
+<div id="footer-mount"></div>
+<script src="page-chrome.js"></script>
+</body>
+</html>
